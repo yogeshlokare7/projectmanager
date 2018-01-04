@@ -47,7 +47,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
                                     <td>
-                                        <a href="#" onclick="setDeleteDetails('<?php echo $value["id"] ?>')" id="ui-bootbox-confirm">
+                                        <a href="#" onclick="setDeleteDetails('<?php echo $value["id"] ?>','<?php echo $tblname?>','view_account')" id="ui-bootbox-confirm">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </td>
@@ -102,42 +102,10 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <input type="submit" class="btn btn-primary" value="Save"/>  
                     <button type="button"  class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
-                <input type="hidden" name="deleteId" id="deleteId">
-                <input type="hidden" name="tblname" id="tblname">
-                <input type="hidden" name="viewpage" id="viewpage">
+                
             </form>
         </div> 
     </div>  
 </div>  
 <!--- ADD POP UP DIALOG ---->
 
-
-<script>
-    function setDeleteDetails(deleteId) {
-        alert(deleteId);
-        document.getElementById("deleteId").value = deleteId;
-        document.getElementById("tblname").value = "tbl_account";
-        document.getElementById("viewpage").value = "view_account";
-    }
-</script>
-
-<script>
-    init.push(function () {
-        $('#ui-bootbox-confirm').on('click', function () {
-            bootbox.confirm({
-                message: "Do you want to delete this record?",
-                callback: function (result) {
-                    if (result) {
-                        var deleteId = document.getElementById("deleteId").value;
-                        var tblname = document.getElementById("tblname").value;
-                        var viewpage = document.getElementById("viewpage").value;
-                        document.frmEntry.action = "mainpage.php?pagename=data_delete&param1="+deleteId+"&param2="+tblname+"&param3="+viewpage;
-                        document.frmEntry.submit();                    
-                    }
-                },
-                className: "bootbox-sm"
-            });
-        });
-
-    });
-</script>

@@ -42,6 +42,9 @@ if (count($explode) >= 2) {
             }
         }
     </script>
+
+
+
 </head>
 <body class="theme-default main-menu-animated">
     <script>var init = [];</script>
@@ -84,9 +87,39 @@ if (count($explode) >= 2) {
                 <li class="active"><a href="#"><?php echo $page ?></a></li>
             </ul>
             <?php include '' . $include . ".php"; ?>
+            <input type="hidden" name="deleteId" id="deleteId">
+            <input type="hidden" name="tblname" id="tblname">
+            <input type="hidden" name="viewpage" id="viewpage">
         </div> <!-- / #content-wrapper -->
         <div id="main-menu-bg"></div>
     </div> <!-- / #main-wrapper -->
+
+    <script>
+        function setDeleteDetails(deleteId, tblName, viewPage) {
+            document.getElementById("deleteId").value = deleteId;
+            document.getElementById("tblname").value = tblName;
+            document.getElementById("viewpage").value = viewPage;
+        }
+        init.push(function () {
+            $('#ui-bootbox-confirm').on('click', function () {
+                bootbox.confirm({
+                    message: "Do you want to delete this record?",
+                    callback: function (result) {
+                        if (result) {
+                            var deleteId = document.getElementById("deleteId").value;
+                            var tblname = document.getElementById("tblname").value;
+                            var viewpage = document.getElementById("viewpage").value;
+                            document.frmEntry.action = "mainpage.php?pagename=data_delete&param1=" + deleteId + "&param2=" + tblname + "&param3=" + viewpage;
+                            document.frmEntry.submit();
+                        }
+                    },
+                    className: "bootbox-sm"
+                });
+            });
+
+        });
+    </script>
+
     <script type="text/javascript"> window.jQuery || document.write('<script src="../ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">' + "<" + "/script>");</script>
     <script src="../assets/javascripts/bootstrap.min.js"></script>
     <script src="../assets/javascripts/pixel-admin.min.js"></script>
