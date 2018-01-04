@@ -37,6 +37,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 <th></th>
                                 <th></th>
                                 <th></th>
+                                <th></th>
+                                <th></th>
                                 <th colspan="3" style="text-align:center">Allowance</th>
                                 <th colspan="2" style="text-align:center">Tax</th>
                                 <th colspan="3" style="text-align:center">Amount</th>
