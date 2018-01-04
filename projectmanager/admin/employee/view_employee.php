@@ -34,6 +34,7 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                             <tr>
                                 <th>#</th>
                                 <th>#</th>
+                                <th>#</th>
                                 <th>Emp Code</th>
                                 <th>Emp Name</th>
                                 <th>Image</th>

@@ -47,8 +47,9 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
                                     <td>
-                                        <a href="#" onclick="setDeleteDetails('<?php echo $value["id"] ?>','<?php echo $tblname?>','view_account')" id="ui-bootbox-confirm">
-                                            <i class="fa fa-times"></i>
+                                        <a 
+                                           onclick="setDeleteDetails('<?php echo $value["id"] ?>', '<?php echo $tblname ?>', 'view_account', '<?php echo $index ?>')" 
+                                           id="ui-bootbox-confirm<?php echo $index ?>"><i class="fa fa-times"></i>
                                         </a>
                                     </td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
@@ -102,7 +103,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <input type="submit" class="btn btn-primary" value="Save"/>  
                     <button type="button"  class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
-                
+
             </form>
         </div> 
     </div>  

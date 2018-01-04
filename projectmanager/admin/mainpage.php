@@ -90,33 +90,38 @@ if (count($explode) >= 2) {
             <input type="hidden" name="deleteId" id="deleteId">
             <input type="hidden" name="tblname" id="tblname">
             <input type="hidden" name="viewpage" id="viewpage">
+            <input type="hidden" name="counter" id="counter">
         </div> <!-- / #content-wrapper -->
         <div id="main-menu-bg"></div>
     </div> <!-- / #main-wrapper -->
 
     <script>
-        function setDeleteDetails(deleteId, tblName, viewPage) {
+        function setDeleteDetails(deleteId, tblName, viewPage, counter) {
             document.getElementById("deleteId").value = deleteId;
             document.getElementById("tblname").value = tblName;
             document.getElementById("viewpage").value = viewPage;
+            document.getElementById("counter").value = counter;
+            alert(deleteId + " == " + tblName + " == " + viewPage + " == " + counter);
         }
         init.push(function () {
-            $('#ui-bootbox-confirm').on('click', function () {
-                bootbox.confirm({
-                    message: "Do you want to delete this record?",
-                    callback: function (result) {
-                        if (result) {
-                            var deleteId = document.getElementById("deleteId").value;
-                            var tblname = document.getElementById("tblname").value;
-                            var viewpage = document.getElementById("viewpage").value;
-                            document.frmEntry.action = "mainpage.php?pagename=data_delete&param1=" + deleteId + "&param2=" + tblname + "&param3=" + viewpage;
-                            document.frmEntry.submit();
-                        }
-                    },
-                    className: "bootbox-sm"
+            var counter = document.getElementById("counter").value;
+            if (counter !== "") {
+                $('#ui-bootbox-confirm').on('click', function () {
+                    bootbox.confirm({
+                        message: "Do you want to delete this record?",
+                        callback: function (result) {
+                            if (result) {
+                                var deleteId = document.getElementById("deleteId").value;
+                                var tblname = document.getElementById("tblname").value;
+                                var viewpage = document.getElementById("viewpage").value;
+                                document.frmEntry.action = "mainpage.php?pagename=data_delete&param1=" + deleteId + "&param2=" + tblname + "&param3=" + viewpage;
+                                document.frmEntry.submit();
+                            }
+                        },
+                        className: "bootbox-sm"
+                    });
                 });
-            });
-
+            }
         });
     </script>
 
