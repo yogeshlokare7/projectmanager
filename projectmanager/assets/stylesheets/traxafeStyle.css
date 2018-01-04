@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 15, 2017, 10:48:05 PM
+    Author     : Oss Ankit PC
+*/
+
+.modal-header{
+    background: #1A5AA6;
+    height: 100px;
+}
+
+.modal-header{
+    color: #ffffff;
+}
+
+.modal-header .close{
+    color: #ffffff;
+}
+
+.btn-info-traxafe{
+    background: #1A5AA6;
+    color: #ffffff;
+}
+
+.btn-info-traxafe{
+    background: #1A5AA6;
+    color: #ffffff;
+}
+
+
+.btn-info-traxafe:active{
+    background: #1A5AA6;
+    color: #ffffff;
+}
+
+.btn-info-traxafe:hover{
+    background: #1A5AA6;
+    color: #ffffff;
+}
+
+.btn-info-traxafe:hover, .btn-info-traxafe:focus, .btn-info-traxafe:active, .btn-info-traxafe.active, .open>.dropdown-toggle.btn-info-traxafe {{
+    background: #1A5AA6;
+    color: #ffffff;
+}
