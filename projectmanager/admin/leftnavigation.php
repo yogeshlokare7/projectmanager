@@ -19,8 +19,8 @@
         <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-users"></i><span class="mm-text">Attendance</span></a>
             <ul>
-                <li><a tabindex="-1" href="mainpage.php?pagename=add_attendance"><span class="mm-text">Add Attendance</span></a></li>
-                <li><a tabindex="-1" href="mainpage.php?pagename=view_attendance"><span class="mm-text">View Attendance</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=add_attendance"><span class="mm-text">Manage Attendance</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=view_attendance"><span class="mm-text">Attendance Report</span></a></li>
             </ul>
         </li>
 

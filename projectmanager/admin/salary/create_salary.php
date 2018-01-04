@@ -102,8 +102,8 @@ $resultsetEmployees = MysqlConnection::fetchAll("tbl_employee");
                                 <td>Total Deduction</td>
                                 <td><input type="text" id="totaldeduction" name="totaldeduction" class="form-control"  value="0" readonly></td>
                             </tr>
-                            
-                            <input type="hidden" id="netamount" name="netamount" class="form-control" value="0"></td>
+
+                        <input type="hidden" id="netamount" name="netamount" class="form-control" value="0"></td>
                         </tbody>
                     </table>
                 </div>
@@ -115,71 +115,70 @@ $resultsetEmployees = MysqlConnection::fetchAll("tbl_employee");
         </form>
     </div>
 </div>
-    <script type="text/javascript">
-        function calcuateDeductionAmount(){
-            var sum=0;
-            
-            var pfemplAmt=document.getElementById("pfempl").value;
-            var b=isNaN(parseFloat(pfemplAmt))?0:parseFloat(pfemplAmt);
-            
-            var pfemplrAmt=document.getElementById("pfemplr").value;
-            var c=isNaN(parseFloat(pfemplrAmt))?0:parseFloat(pfemplrAmt);
-            var professional=document.getElementById("professionaltax").value;
-            var d=isNaN(parseFloat(professional))?0:parseFloat(professional);
-            
-            var income=document.getElementById("incometax").value;
-            var e=isNaN(parseFloat(income))?0:parseFloat(income);
-            
-            var advances=document.getElementById("advances").value;
-            var f=isNaN(parseFloat(advances))?0:parseFloat(advances);
-            
-            var meal=document.getElementById("mealvouchers").value;
-            var g=isNaN(parseFloat(meal))?0:parseFloat(meal);
-            
-            var giftvouchersAmt=document.getElementById("giftvouchers").value;
-            var h=isNaN(parseFloat(giftvouchersAmt))?0:parseFloat(giftvouchersAmt);
-            sum=b+c+d+e+f+g+h;
-            document.getElementById("totaldeduction").value = sum;
-        }
-        
-        function calcuateGrossAmount(){
-            var sum=0;
-            
-            var basicAmt=document.getElementById("basic").value;
-            var b=isNaN(parseFloat(basicAmt))?0:parseFloat(basicAmt);
-            
-            var hraAmt=document.getElementById("hra").value;
-            var c=isNaN(parseFloat(hraAmt))?0:parseFloat(hraAmt);
-            
-            var transport=document.getElementById("transportallowance").value;
-            var d=isNaN(parseFloat(transport))?0:parseFloat(transport);
-            
-            var medical=document.getElementById("medicalallowance").value;
-            var e=isNaN(parseFloat(medical))?0:parseFloat(medical);
-            
-            var other=document.getElementById("otherallowance").value;
-            var f=isNaN(parseFloat(other))?0:parseFloat(other);
-            
-            var onsite=document.getElementById("onsiteallowance").value;
-            var g=isNaN(parseFloat(onsite))?0:parseFloat(onsite);
-            
-            var incentiveAmt=document.getElementById("incentive").value;
-            var h=isNaN(parseFloat(incentiveAmt))?0:parseFloat(incentiveAmt);
+<script type="text/javascript">
+    function calcuateDeductionAmount() {
+        var sum = 0;
 
-            var arrears=document.getElementById("arrears").value;
-            var i=isNaN(parseFloat(arrears))?0:parseFloat(arrears);
-            
-            sum=b+c+d+e+f+g+h+i;
-            document.getElementById("grossamount").value = sum;
-        }
-       function calcualteTotalAmount(){
-           var abc = document.getElementById("grossamount").value;
-           var grossValue=isNaN(parseFloat(abc))?0:parseFloat(abc);
-           var cde = document.getElementById("totaldeduction").value;
-           var deductionValue=isNaN(parseFloat(cde))?0:parseFloat(cde);
-           var diff = grossValue - deductionValue;
-           document.getElementById("netamount").value = diff;
-       }
-    </script>
-    
-        
+        var pfemplAmt = document.getElementById("pfempl").value;
+        var b = isNaN(parseFloat(pfemplAmt)) ? 0 : parseFloat(pfemplAmt);
+
+        var pfemplrAmt = document.getElementById("pfemplr").value;
+        var c = isNaN(parseFloat(pfemplrAmt)) ? 0 : parseFloat(pfemplrAmt);
+        var professional = document.getElementById("professionaltax").value;
+        var d = isNaN(parseFloat(professional)) ? 0 : parseFloat(professional);
+
+        var income = document.getElementById("incometax").value;
+        var e = isNaN(parseFloat(income)) ? 0 : parseFloat(income);
+
+        var advances = document.getElementById("advances").value;
+        var f = isNaN(parseFloat(advances)) ? 0 : parseFloat(advances);
+
+        var meal = document.getElementById("mealvouchers").value;
+        var g = isNaN(parseFloat(meal)) ? 0 : parseFloat(meal);
+
+        var giftvouchersAmt = document.getElementById("giftvouchers").value;
+        var h = isNaN(parseFloat(giftvouchersAmt)) ? 0 : parseFloat(giftvouchersAmt);
+        sum = b + c + d + e + f + g + h;
+        document.getElementById("totaldeduction").value = sum;
+    }
+
+    function calcuateGrossAmount() {
+        var sum = 0;
+
+        var basicAmt = document.getElementById("basic").value;
+        var b = isNaN(parseFloat(basicAmt)) ? 0 : parseFloat(basicAmt);
+
+        var hraAmt = document.getElementById("hra").value;
+        var c = isNaN(parseFloat(hraAmt)) ? 0 : parseFloat(hraAmt);
+
+        var transport = document.getElementById("transportallowance").value;
+        var d = isNaN(parseFloat(transport)) ? 0 : parseFloat(transport);
+
+        var medical = document.getElementById("medicalallowance").value;
+        var e = isNaN(parseFloat(medical)) ? 0 : parseFloat(medical);
+
+        var other = document.getElementById("otherallowance").value;
+        var f = isNaN(parseFloat(other)) ? 0 : parseFloat(other);
+
+        var onsite = document.getElementById("onsiteallowance").value;
+        var g = isNaN(parseFloat(onsite)) ? 0 : parseFloat(onsite);
+
+        var incentiveAmt = document.getElementById("incentive").value;
+        var h = isNaN(parseFloat(incentiveAmt)) ? 0 : parseFloat(incentiveAmt);
+
+        var arrears = document.getElementById("arrears").value;
+        var i = isNaN(parseFloat(arrears)) ? 0 : parseFloat(arrears);
+
+        sum = b + c + d + e + f + g + h + i;
+        document.getElementById("grossamount").value = sum;
+    }
+    function calcualteTotalAmount() {
+        var abc = document.getElementById("grossamount").value;
+        var grossValue = isNaN(parseFloat(abc)) ? 0 : parseFloat(abc);
+        var cde = document.getElementById("totaldeduction").value;
+        var deductionValue = isNaN(parseFloat(cde)) ? 0 : parseFloat(cde);
+        var diff = grossValue - deductionValue;
+        document.getElementById("netamount").value = diff;
+    }
+</script>
+

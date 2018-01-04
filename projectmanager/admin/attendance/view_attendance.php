@@ -1,21 +1,19 @@
+<?php
+$tblname = "tbl_attendance";
+$resultset = MysqlConnection::fetchAll($tblname);
+?>
 <div class="row">
     <div class="col-sm-12">
         <script>
             init.push(function () {
                 $('#jq-datatables-example').dataTable();
-                $('#jq-datatables-example_wrapper .table-caption').text('<?php echo $explode[1] ?> Information');
+                $('#jq-datatables-example_wrapper .table-caption').text('Attendance Information');
                 $('#jq-datatables-example_wrapper .dataTables_filter input').attr('placeholder', 'Search...');
             });
         </script>
         <div class="panel">
             <div class="panel-heading">
-                <span class="panel-title">View <?php echo $explode[1] ?></span>
-                <span class="panel-title">&nbsp;|&nbsp;</span>
-                <span class="panel-title">
-                    <a href="mainpage.php?pagename=add_<?php echo $explode[1] ?>">
-                        <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded">Add <?php echo $explode[1] ?></button>
-                    </a>
-                </span>
+                <span class="panel-title">View Attendance</span>
             </div>
             <div class="panel-body">
                 <div class="table-primary">
@@ -24,27 +22,33 @@
                             <tr>
                                 <th>#</th>
                                 <th>#</th>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                                <th>Emp Code</th>
+                                <th>Employee Name</th>
+                                <th>Month</th>
+                                <th>Working</th>
+                                <th>Non Working</th>
+                                <th>Leaves Taken</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            for ($index = 0; $index < 50; $index++) {
+                            $index = 1;
+                            foreach ($resultset as $key => $value) {
                                 ?>
                                 <tr class="odd gradeX">
-                                    <td>#</td>
-                                    <td>#</td>
-                                    <td>Trident <?php echo $index ?></td>
-                                    <td>Internet Explorer 4.0</td>
-                                    <td>Win 95+</td>
-                                    <td class="center"> 4</td>
-                                    <td class="center">X</td>
+                                    <td><?php echo $index ?></td>
+                                    <td>
+                                        <a href="mainpage.php?pagename=detail_attendance">Detail</a>
+                                    </td>
+                                    <td><?php echo $value["empid"] ?></td>
+                                    <td><?php echo $value["empname"] ?></td>
+                                    <td><?php echo $value["intime"] ?></td>
+                                    <td><?php echo $value["outtime"] ?></td>
+                                    <td><?php echo $value["entrydate"] ?></td>
+                                    <td><?php echo $value["active"] ?></td>
                                 </tr>
                                 <?php
+                                $index++;
                             }
                             ?>
                         </tbody>
