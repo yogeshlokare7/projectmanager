@@ -20,7 +20,9 @@
         <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-user"></i><span class="mm-text">Employee</span></a>
             <ul>
-                <li><a tabindex="-1" href="mainpage.php?pagename=update_employee"><span class="mm-text">Update Profile</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=view_employee_education"><span class="mm-text">Educational Information</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=work_employee"><span class="mm-text">Working Experience</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=personalinfo_employee"><span class="mm-text">Personal Info</span></a></li>
                 <li><a tabindex="-1" href="mainpage.php?pagename=view_employee"><span class="mm-text">View Profile</span></a></li>
             </ul>
         </li>

@@ -74,7 +74,7 @@ if (count($explode) >= 2) {
                         <ul class="nav navbar-nav">
                             <li><a href="mainpage.php?pagename=updateprofile"><i class="fa fa-user"></i>&nbsp;&nbsp;Profile</a></li>
                             <li><a href="mainpage.php?pagename=updateaccount"><i class="fa fa-money"></i>&nbsp;&nbsp;Account</a></li>
-                            <li><a href="mainpage.php?pagename=updatepassword"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
+                            <li><a href="mainpage.php?pagename=update_settings"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Settings</a></li>
                             <li><a href="mainpage.php?pagename=do_logout"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Log Out</a></li>
                         </ul> <!-- / .navbar-nav -->
                     </div>
