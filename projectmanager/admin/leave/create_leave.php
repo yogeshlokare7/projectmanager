@@ -31,6 +31,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>#</th>
+                                <th>#</th>
                                 <th>Leave Name</th>
                                 <th>Description</th>
                                 <th>Unit</th>
@@ -45,6 +47,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                            <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["leavename"] ?></td>
                                     <td><?php echo $value["description"] ?></td>
                                     <td><?php echo $value["unit"] ?></td>

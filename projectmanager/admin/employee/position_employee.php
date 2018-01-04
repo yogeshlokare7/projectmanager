@@ -31,6 +31,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <thead>
                             <tr>
                                 <th>#</th>
+                                  <th>#</th>
+                                    <th>#</th>
                                 <th>Position Name</th>
                                 <th>Description</th>
                                 <th>Entry Date</th>
@@ -44,6 +46,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["positionname"] ?></td>
                                     <td><?php echo $value["description"] ?></td>
                                     <td><?php echo $value["entrydate"] ?></td>

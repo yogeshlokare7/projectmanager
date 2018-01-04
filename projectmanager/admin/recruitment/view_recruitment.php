@@ -24,6 +24,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>#</th>
+                                 <th>#</th>
+                                <th>#</th>
                                 <th>Rendering engine</th>
                                 <th>Browser</th>
                                 <th>Platform(s)</th>
@@ -38,6 +40,8 @@
                                 <tr class="odd gradeX">
                                     <td>#</td>
                                     <td>#</td>
+                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td>Trident <?php echo $index ?></td>
                                     <td>Internet Explorer 4.0</td>
                                     <td>Win 95+</td>

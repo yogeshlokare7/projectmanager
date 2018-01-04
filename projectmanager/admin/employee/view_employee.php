@@ -33,6 +33,7 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>#</th>
                                 <th>Emp Code</th>
                                 <th>Emp Name</th>
                                 <th>Image</th>
@@ -51,6 +52,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                          <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empId"] ?></td>
                                     <td><?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?></td>
                                     <td><?php echo $value["image"] ?></td>

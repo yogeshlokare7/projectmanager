@@ -43,6 +43,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                             </tr>
                             <tr>
                                 <th>#</th>
+                                <th>#</th>
+                                <th>#</th>
                                 <th>Employee Name</th>
                                 <th>BASIC</th>
                                 <th>HRA</th>
@@ -65,6 +67,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                          <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $empResult["firstname"]." ".$empResult["lastname"] ?></td>
                                     <td><?php echo $value["basic"] ?></td>
                                     <td><?php echo $value["hra"] ?></td>

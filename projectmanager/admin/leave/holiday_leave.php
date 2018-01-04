@@ -38,6 +38,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <thead>
                             <tr>
                                 <th>#</th>
+                                 <th>#</th>
+                                 <th>#</th>
                                 <th>Holiday Name</th>
                                 <th>From Date</th>
                                 <th>To Date</th>
@@ -53,6 +55,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                            <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["holidayname"] ?></td>
                                     <td><?php echo $value["fromdate"] ?></td>
                                     <td><?php echo $value["todate"] ?></td>
