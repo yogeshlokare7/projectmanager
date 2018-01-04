@@ -38,6 +38,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>#</th>
+                                <th>#</th>
                                 <th>Project Id</th>
                                 <th>Charge Code</th>
                                 <th>Project Name</th>
@@ -57,6 +59,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                     <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["projectid"] ?></td>
                                     <td><?php echo $value["projectcode"] ?></td>
                                     <td><?php echo $value["projectname"] ?></td>
@@ -94,13 +98,13 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Project Id *</label>
-                                <input type="text" name="projectid" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="30" name="projectid" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Charge Code *</label>
-                                <input type="text" name="projectcode" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="30"  onkeypress="return chkNumericKey(event)" name="projectcode" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
@@ -108,7 +112,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Project Title *</label>
-                                <input type="text" name="projectname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="30" name="projectname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
@@ -144,13 +148,13 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Per Day Work *</label>
-                                <input type="text" name="perdaywork" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="perdaywork" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Total Hr Work *</label>
-                                <input type="text" name="totalhrwork" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="totalhrwork"  onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
