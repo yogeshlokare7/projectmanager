@@ -148,13 +148,13 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Per Day Work *</label>
-                                <input type="text" name="perdaywork" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="perdaywork" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Total Hr Work *</label>
-                                <input type="text" name="totalhrwork"  onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="totalhrwork" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
