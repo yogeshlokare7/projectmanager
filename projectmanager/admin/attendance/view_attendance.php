@@ -39,11 +39,12 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
-                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
+                                    
                                     <td>
                                         <a href="mainpage.php?pagename=detail_attendance">Detail</a>
                                     </td>
+                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empid"] ?></td>
                                     <td><?php echo $value["empname"] ?></td>
                                     <td><?php echo $value["intime"] ?></td>

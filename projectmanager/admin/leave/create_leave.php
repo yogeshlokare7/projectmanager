@@ -81,7 +81,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Leave Name *</label>
-                                <input type="text" name="leavename" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="50" name="leavename" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                     </div>

@@ -50,6 +50,8 @@ if (isset($_GET["status"])) {
                             <tr>
                                 <th>#</th>
                                 <th>#</th>
+                                <th>#</th>
+                                <th>#</th>
                                 <th>Emp Code</th>
                                 <th>Employee Name</th>
                                 <th>Leave Type</th>
@@ -72,6 +74,8 @@ if (isset($_GET["status"])) {
                                             Update
                                         </a>
                                     </td>
+                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empCode"] ?></td>
                                     <td><?php echo $value["empname"] ?></td>
                                     <td><?php echo $value["leaveType"] ?></td>
