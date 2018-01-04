@@ -29,13 +29,13 @@ if ($_POST) {
                     <div class="col-sm-6">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Email</label>
-                            <input type="email" name="" class="form-control">
+                            <input type="email" maxlength="50" name="" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-6">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Website</label>
-                            <input type="url" name="website" class="form-control">
+                            <input type="url" maxlength="50" name="website" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                 </div><!-- row -->
