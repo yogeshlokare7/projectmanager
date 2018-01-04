@@ -230,3 +230,26 @@ CREATE TABLE `ppms`.`tbl_employee_personalinfo` (
   `updatedate` DATE NULL,
   `active` CHAR(1) NULL,
   PRIMARY KEY (`id`));
+
+CREATE TABLE IF NOT EXISTS `tbl_recruitment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(30) DEFAULT NULL,
+  `middlename` varchar(30) DEFAULT NULL,
+  `lastname` varchar(30) DEFAULT NULL,
+  `emailid` varchar(60) DEFAULT NULL,
+  `contactnumber` varchar(30) DEFAULT NULL,
+  `altercontact` varchar(30) DEFAULT NULL,
+  `currentaddress` text,
+  `permenentaddress` text,
+  `resume` text,
+  `jobtitle` varchar(200) DEFAULT NULL,
+  `totalexperience` double(6,2) DEFAULT NULL,
+  `noticeperiod` double DEFAULT NULL,
+  `currentctc` double(6,2) DEFAULT NULL,
+  `expectedctc` double(6,2) DEFAULT NULL,
+  `isselected` char(1) DEFAULT NULL,
+  `entrydate` date DEFAULT NULL,
+  `updatedate` date DEFAULT NULL,
+  `active` char(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
