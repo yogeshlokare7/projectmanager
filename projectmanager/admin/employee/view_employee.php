@@ -153,13 +153,13 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Contact Number *</label>
-                                <input type="text" name="contactnumber" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="contactnumber" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Alternet Number *</label>
-                                <input type="text" name="altercontact" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="altercontact" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                     </div>

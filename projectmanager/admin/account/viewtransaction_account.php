@@ -114,7 +114,7 @@ $resultsetexpense = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHER
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Amount </label>
-                                <input type="text" name="amount" autofocus="" onkeypress="return chkNumericKey(event)" placeholder="Enter Account Name" class="form-control">
+                                <input type="text" name="amount" maxlength="30" autofocus="" onkeypress="return chkNumericKey(event)" placeholder="Enter Amount" class="form-control">
                             </div>
                         </div> 
                         <div class="col-sm-12">
@@ -126,7 +126,7 @@ $resultsetexpense = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHER
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Payment </label>
-                                <input type="text" name="payment" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Account Name" class="form-control">
+                                <input type="text" name="payment" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Payment" class="form-control">
                             </div>
                         </div> 
                     </div><!-- row -->
@@ -173,7 +173,7 @@ $resultsetexpense = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHER
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Amount </label>
-                                <input type="text" name="amount" autofocus="" placeholder="Enter Account Name" class="form-control">
+                                <input type="text" name="amount"  maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Amount" class="form-control">
                             </div>
                         </div> 
                         <div class="col-sm-12">
@@ -185,7 +185,7 @@ $resultsetexpense = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHER
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Payment </label>
-                                <input type="text" name="payment" autofocus="" placeholder="Enter Account Name" class="form-control">
+                                <input type="text" name="payment" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Payment" class="form-control">
                             </div>
                         </div> 
                     </div><!-- row -->

@@ -49,61 +49,61 @@ $resultsetEmployees = MysqlConnection::fetchAll("tbl_employee");
                         <tbody>
                             <tr class="odd gradeX">
                                 <td>Basic</td>
-                                <td><input type="text" id="basic" name="basic" class="form-control" tabindex="2" onkeyup="calcuateGrossAmount()" autofocus="true" required></td>
+                                <td><input type="text" id="basic" name="basic" onkeypress="return chkNumericKey(event)"  class="form-control" tabindex="2" onkeyup="calcuateGrossAmount()" autofocus="true" required></td>
                                 <td>PF-Empl</td>
-                                <td><input type="text" id="pfempl" name="pfempl" class="form-control" tabindex="10" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="pfempl" name="pfempl" onkeypress="return chkNumericKey(event)" class="form-control" tabindex="10" onkeyup="calcuateDeductionAmount()" required></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>HRA</td>
-                                <td><input type="text" id="hra" name="hra" class="form-control" tabindex="3" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="hra" name="hra" onkeypress="return chkNumericKey(event)"  class="form-control" tabindex="3" onkeyup="calcuateGrossAmount()" required></td>
                                 <td>PF-Emplr</td>
-                                <td><input type="text" id="pfemplr" name="pfemplr" class="form-control" tabindex="11" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="pfemplr" name="pfemplr" onkeypress="return chkNumericKey(event)" class="form-control" tabindex="11" onkeyup="calcuateDeductionAmount()" required></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>Transport Allowance</td>
-                                <td><input type="text" id="transportallowance" name="transportallowance" class="form-control" tabindex="4" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="transportallowance" name="transportallowance" onkeypress="return chkNumericKey(event)" class="form-control" tabindex="4" onkeyup="calcuateGrossAmount()" required></td>
                                 <td>Professional Tax</td>
-                                <td><input type="text" id="professionaltax" name="professionaltax" class="form-control" tabindex="12" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="professionaltax" name="professionaltax" class="form-control" onkeypress="return chkNumericKey(event)"  tabindex="12" onkeyup="calcuateDeductionAmount()" required></td>
 
                             </tr>
                             <tr class="odd gradeX">
                                 <td>Medical Allowance</td>
-                                <td><input type="text" id="medicalallowance" name="medicalallowance" class="form-control" tabindex="5" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="medicalallowance" name="medicalallowance" class="form-control" onkeypress="return chkNumericKey(event)" tabindex="5" onkeyup="calcuateGrossAmount()" required></td>
                                 <td>Income Tax</td>
-                                <td><input type="text" id="incometax" name="incometax" class="form-control" tabindex="13" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="incometax" name="incometax" class="form-control" onkeypress="return chkNumericKey(event)" tabindex="13" onkeyup="calcuateDeductionAmount()" required></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>Other Allowance</td>
-                                <td><input type="text" id="otherallowance" name="otherallowance" class="form-control" tabindex="6" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="otherallowance" name="otherallowance" onkeypress="return chkNumericKey(event)" class="form-control" tabindex="6" onkeyup="calcuateGrossAmount()" required></td>
                                 <td>Advances</td>
-                                <td><input type="text" id="advances" name="advances" class="form-control" tabindex="14" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="advances" name="advances" onkeypress="return chkNumericKey(event)" class="form-control" tabindex="14" onkeyup="calcuateDeductionAmount()" required></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>On Site Allowance</td>
-                                <td><input type="text" id="onsiteallowance" name="onsiteallowance" class="form-control" tabindex="7" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="onsiteallowance" name="onsiteallowance" onkeypress="return chkNumericKey(event)"  class="form-control" tabindex="7" onkeyup="calcuateGrossAmount()" required></td>
                                 <td>Meal Vouchers</td>
-                                <td><input type="text" id="mealvouchers" name="mealvouchers" class="form-control" tabindex="15" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="mealvouchers" name="mealvouchers" class="form-control" onkeypress="return chkNumericKey(event)" tabindex="15" onkeyup="calcuateDeductionAmount()" required></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>Incentives/ Commission</td>
-                                <td><input type="text" id="incentive" name="incentive" class="form-control" tabindex="8" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="incentive" name="incentive"  onkeypress="return chkNumericKey(event)" class="form-control" tabindex="8" onkeyup="calcuateGrossAmount()" required></td>
                                 <td>Gift Vouchers</td>
-                                <td><input type="text" id="giftvouchers" name="giftvouchers" class="form-control" tabindex="16" onkeyup="calcuateDeductionAmount()" required></td>
+                                <td><input type="text" id="giftvouchers" name="giftvouchers" onkeypress="return chkNumericKey(event)" class="form-control" tabindex="16" onkeyup="calcuateDeductionAmount()" required></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>Arrears</td>
-                                <td><input type="text" id="arrears" name="arrears" class="form-control" tabindex="9" onkeyup="calcuateGrossAmount()" required></td>
+                                <td><input type="text" id="arrears" name="arrears"onkeypress="return chkNumericKey(event)" class="form-control" tabindex="9" onkeyup="calcuateGrossAmount()" required></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr class="odd gradeX">
                                 <td>Gross Amount</td>
-                                <td><input type="text" id="grossamount" name="grossamount" class="form-control" value="0" readonly></td>
+                                <td><input type="text" id="grossamount" name="grossamount" onkeypress="return chkNumericKey(event)" class="form-control" value="0" readonly></td>
                                 <td>Total Deduction</td>
-                                <td><input type="text" id="totaldeduction" name="totaldeduction" class="form-control"  value="0" readonly></td>
+                                <td><input type="text" id="totaldeduction"  name="totaldeduction" onkeypress="return chkNumericKey(event)"  class="form-control"  value="0" readonly></td>
                             </tr>
 
-                        <input type="hidden" id="netamount" name="netamount" class="form-control" value="0"></td>
+                        <input type="hidden" id="netamount" name="netamount" onkeypress="return chkNumericKey(event)"  class="form-control" value="0"></td>
                         </tbody>
                     </table>
                 </div>

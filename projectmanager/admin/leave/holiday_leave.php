@@ -111,7 +111,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Total Days </label>
-                                <input type="text" name="noofday" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" name="noofday" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                     </div>
