@@ -22,6 +22,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                             <tr>
                                 <th>#</th>
                                 <th>#</th>
+                                  <th>#</th>
+                                <th>#</th>
                                 <th>Emp Code</th>
                                 <th>Employee Name</th>
                                 <th>Month</th>
@@ -37,6 +39,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
+                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td>
                                         <a href="mainpage.php?pagename=detail_attendance">Detail</a>
                                     </td>

@@ -14,13 +14,13 @@ if ($_POST) {
                     <div class="col-sm-6">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Firstname</label>
-                            <input type="text" name="" autofocus="" class="form-control">
+                            <input type="text" maxlength="30" minlength="3" name="" autofocus="" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-6">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Lastname</label>
-                            <input type="text" name="" class="form-control">
+                            <input type="text" maxlength="30" minlength="3" name="" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                 </div><!-- row -->

@@ -94,19 +94,19 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">First Name *</label>
-                                <input type="text" name="firstname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" minlength="3" maxlength="30" name="firstname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Middle Name *</label>
-                                <input type="text" name="middlename" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" minlength="3" maxlength="30" name="middlename" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Last Name *</label>
-                                <input type="text" name="lastname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text"  minlength="3" maxlength="30" name="lastname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
