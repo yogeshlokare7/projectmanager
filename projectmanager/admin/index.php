@@ -1,3 +1,15 @@
+<?php
+error_reporting(0);
+if (isset($_POST) && $_POST["signin_username"] != "") {
+    $signinUsername = $_POST["signin_username"];
+    $signinPassword = $_POST["signin_password"];
+    if ($signinUsername == "admin" && $signinPassword == "admin@1234") {
+        header("location:mainpage.php");
+    } else {
+        $error = "Invalid username and password";
+    }
+}
+?>
 <!DOCTYPE html>
 <html class="gt-ie8 gt-ie9 not-ie">
     <head>
@@ -35,7 +47,7 @@
         <script src="assets/demo/demo.js"></script> <!-- / Demo script -->
         <div class="signin-container">
             <div class="signin-info">
-                <a href="index.html" class="logo">
+                <a href="index.php" class="logo">
                     <img src="assets/demo/logo-big.png" alt="" style="margin-top: -5px;">&nbsp;
                     MJB Info PPMS
                 </a> <!-- / .logo -->
@@ -53,9 +65,9 @@
 
             <!-- Right side -->
             <div class="signin-form">
-
+                <p style="color: red"><?php echo $error ?></p>    
                 <!-- Form -->
-                <form action="mainpage.php" id="signin-form_id">
+                <form method="post" id="signin-form_id">
                     <div class="signin-text">
                         <span>Sign In to your account</span>
                     </div> <!-- / .signin-text -->
