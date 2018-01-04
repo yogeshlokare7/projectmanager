@@ -31,6 +31,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>#</th>
+                                <th>#</th>
                                 <th>Account Name</th>
                                 <th>Account Type</th>
                                 <th>Entry Date</th>
@@ -44,10 +46,12 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><?php echo $value["accountname"]?></td>
-                                    <td><?php echo $value["accounttype"]?></td>
-                                    <td><?php echo $value["entrydate"]?></td>
-                                    <td><?php echo $value["active"]?></td>
+                                    <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
+                                    <td><?php echo $value["accountname"] ?></td>
+                                    <td><?php echo $value["accounttype"] ?></td>
+                                    <td><?php echo $value["entrydate"] ?></td>
+                                    <td><?php echo $value["active"] ?></td>
                                 </tr>
                                 <?php
                                 $index++;
