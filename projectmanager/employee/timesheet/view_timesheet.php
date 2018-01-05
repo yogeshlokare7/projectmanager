@@ -1,6 +1,6 @@
 <?php
 $tblname = "tbl_timesheet";
-$resultset = MysqlConnection::fetchAll($tblname);
+$resultset = MysqlConnection::fetchCustom("SELECT * FROM  tbl_timesheet WHERE empid = $id");
 
 $sqlFindDate = "SELECT DISTINCT(entrydate) as entrydate FROM tbl_timesheet ORDER BY entrydate DESC; ";
 
@@ -20,11 +20,11 @@ foreach ($resultSet as $key => $value) {
     $resultHoursBillableNonBillable = MysqlConnection::fetchCustom($sqlFromToDate);
 
     foreach ($resultHoursBillableNonBillable as $key1 => $value1) {
-
         $sqlTotalHr = "SELECT * FROM tbl_timesheet  WHERE   startDate = '" . $value1["startDate"] . "' AND endDate =  '" . $value1["endDate"] . "' AND empid = $id  ";
         $resultSetForTotal = MysqlConnection::fetchCustom($sqlTotalHr);
         foreach ($resultSetForTotal as $key2 => $value2) {
-            if ($value2["isBillable"] == "N") {
+            $expcode = explode("-", $value2["code"]);
+            if ($expcode[0] == "P") {
                 $billableHr = $billableHr + $value2["monday"] + $value2["tuesday"] + $value2["wednesday"] + $value2["thursday"] + $value2["friday"] + $value2["saturday"];
             } else {
                 $nonBillableHr = $nonBillableHr + $value2["monday"] + $value2["tuesday"] + $value2["wednesday"] + $value2["thursday"] + $value2["friday"] + $value2["saturday"];
@@ -83,7 +83,7 @@ foreach ($resultSet as $key => $value) {
                                         <?php echo $resultSetFromDate[0]["endDate"] ?>
                                     </td>
                                     <td><?php echo $fullname ?></td>
-                                    <td>40</td>
+                                    <td><?php echo ($value["billableHr"] + $value["nonBillableHr"]) ?></td>
                                     <td><?php echo $value["billableHr"] ?></td>
                                     <td><?php echo $value["nonBillableHr"] ?></td>
                                     <td><?php echo $value["entrydate"] ?></td>

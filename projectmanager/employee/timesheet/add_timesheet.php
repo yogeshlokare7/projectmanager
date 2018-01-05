@@ -32,53 +32,55 @@ foreach ($arrleaves as $key => $value) {
     array_push($timesheetdropdown, $details);
 }
 
+
+
+$sqlTotalHr = "SELECT * FROM tbl_timesheet  WHERE   startDate = '" . $startDate . "' AND endDate =  '" . $endDate . "' AND empid = $id  ";
+$customResult = MysqlConnection::fetchCustom($sqlTotalHr);
+
+if (count($customResult) > 0) {
+    $isValidate = "";
+    $invalid = "You have already filled timesheet for this period !!!";
+}
 if (isset($_POST["btnValidate"]) || isset($_POST["btnSubmit"])) {
 
-    $sqlTotalHr = "SELECT * FROM tbl_timesheet  WHERE   startDate = '" . $startDate . "' AND endDate =  '" . $endDate . "' AND empid = $id  ";
-    $customResult = MysqlConnection::fetchCustom($sqlTotalHr);
-    if ($customResult > 0) {
-        $isValidate = "";
-        $invalid = "You have already filled timesheet for this period !!!";
-    } else {
-        $isValidate = "Yes";
-        $totalHours = 0;
-        for ($ind = 1; $ind < 6; $ind++) {
-            $timesheet = $_POST["timesheet$ind"];
-            if (strlen(trim($timesheet)) != 0) {
-                $timesheetdata = array();
-                $timesheetdata["empid"] = $id;
-                $timesheetdata["empname"] = $fullname;
-                $timesheetdata["code"] = $timesheet;
-                $timesheetdata["monday"] = validateNumeric($_POST["txtTime$ind" . "0"]);
-                $timesheetdata["tuesday"] = validateNumeric($_POST["txtTime$ind" . "1"]);
-                $timesheetdata["wednesday"] = validateNumeric($_POST["txtTime$ind" . "2"]);
-                $timesheetdata["thursday"] = validateNumeric($_POST["txtTime$ind" . "3"]);
-                $timesheetdata["friday"] = validateNumeric($_POST["txtTime$ind" . "4"]);
-                $timesheetdata["saturday"] = validateNumeric($_POST["txtTime$ind" . "5"]);
-                $timesheetdata["isBillable"] = "N";
-                $timesheetdata["entrydate"] = date("y-m-d");
-                $timesheetdata["updatedate"] = date("y-m-d");
-                $timesheetdata["startDate"] = $startDate;
-                $timesheetdata["endDate"] = $endDate;
-                $timesheetdata["active"] = "Y";
-                if (isset($_POST["btnSubmit"])) {
-                    MysqlConnection::insert($tblname, $timesheetdata);
-                } else {
-                    for ($indexCal = 0; $indexCal < 6; $indexCal++) {
-                        $totalHours = $totalHours + validateNumeric($_POST["txtTime$ind" . $indexCal]);
-                    }
+    $isValidate = "Yes";
+    $totalHours = 0;
+    for ($ind = 1; $ind < 6; $ind++) {
+        $timesheet = $_POST["timesheet$ind"];
+        if (strlen(trim($timesheet)) != 0) {
+            $timesheetdata = array();
+            $timesheetdata["empid"] = $id;
+            $timesheetdata["empname"] = $fullname;
+            $timesheetdata["code"] = $timesheet;
+            $timesheetdata["monday"] = validateNumeric($_POST["txtTime$ind" . "0"]);
+            $timesheetdata["tuesday"] = validateNumeric($_POST["txtTime$ind" . "1"]);
+            $timesheetdata["wednesday"] = validateNumeric($_POST["txtTime$ind" . "2"]);
+            $timesheetdata["thursday"] = validateNumeric($_POST["txtTime$ind" . "3"]);
+            $timesheetdata["friday"] = validateNumeric($_POST["txtTime$ind" . "4"]);
+            $timesheetdata["saturday"] = validateNumeric($_POST["txtTime$ind" . "5"]);
+            $timesheetdata["isBillable"] = "N";
+            $timesheetdata["entrydate"] = date("y-m-d");
+            $timesheetdata["updatedate"] = date("y-m-d");
+            $timesheetdata["startDate"] = $startDate;
+            $timesheetdata["endDate"] = $endDate;
+            $timesheetdata["active"] = "Y";
+            if (isset($_POST["btnSubmit"])) {
+                MysqlConnection::insert($tblname, $timesheetdata);
+            } else {
+                for ($indexCal = 0; $indexCal < 6; $indexCal++) {
+                    $totalHours = $totalHours + validateNumeric($_POST["txtTime$ind" . $indexCal]);
                 }
             }
         }
-        if ($totalHours < 40 || $totalHours > 48) {
-            $isValidate = "";
-            $invalid = "Please validate your timesheet";
-        } else {
-            $isValidate = "Yes";
-        }
-        if (isset($_POST["btnSubmit"])) {
-            header("location:mainpage.php?pagename=viewproject_timesheet");
-        }
+    }
+    if ($totalHours < 40 || $totalHours > 48) {
+        $isValidate = "";
+        $invalid = "Please validate your timesheet";
+    } else {
+        $isValidate = "Yes";
+    }
+    if (isset($_POST["btnSubmit"])) {
+        header("location:mainpage.php?pagename=view_timesheet");
     }
 }
 ?>
@@ -170,7 +172,7 @@ if (isset($_POST["btnValidate"]) || isset($_POST["btnSubmit"])) {
                         </table>
                         <div class="modal-footer" style="margin: 0 auto;text-align: center">
                             <?php
-                            if ($isValidate == "Yes") {
+                            if ($isValidate == "Yes" && $invalid == "") {
                                 ?>
                                 <input type="submit" class="btn btn-success" value="Submit" name="btnSubmit"/>  
                                 <input type="submit" class="btn btn-success" value="Clear" name="btnCancle"/>  
