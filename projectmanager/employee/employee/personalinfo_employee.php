@@ -9,7 +9,7 @@ if (count($_POST) > 0) {
     $_POST["empname"] = $fullname;
     MysqlConnection::insert($tblname, $_POST);
 }
-$resultset = MysqlConnection::fetchAll($tblname);
+$resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_employee_personalinfo WHERE empId = $id");
 ?>
 <div class="row">
     <div class="col-sm-12">

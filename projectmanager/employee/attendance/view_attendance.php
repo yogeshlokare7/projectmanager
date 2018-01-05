@@ -87,11 +87,21 @@ $resultset = MysqlConnection::fetchAll($tblname);
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Add Account Information</h4>
+                <h4 class="modal-title" id="myModalLabel">Add Attendance</h4>
             </div>
             <form name="frmEntry" method="post">
                 <div class="modal-body">
                     <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group no-margin-hr">
+                                <label class="control-label">Select Type</label>
+                                <select class="form-control" name="type">
+                                    <option>Select Preference</option>
+                                    <option value="in">In Time</option>
+                                    <option value="out">Out Time</option>
+                                </select>
+                            </div>
+                        </div><!-- col-sm-6 -->
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Select Preference</label>
