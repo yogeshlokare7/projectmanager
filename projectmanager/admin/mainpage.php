@@ -42,7 +42,11 @@ if (count($explode) >= 2) {
             }
         }
     </script>
-
+    <style>
+        .requred{
+            color: red;
+        }
+    </style>
 
 
 </head>

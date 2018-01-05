@@ -112,7 +112,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Project Title *</label>
-                                <input type="text" maxlength="30" name="projectname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="60" name="projectname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->

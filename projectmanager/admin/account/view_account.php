@@ -83,8 +83,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Account Name *</label>
-                                <input type="text" maxlength="30" minlength="3" name="accountname" autofocus="" placeholder="Enter Account Name" class="form-control">
+                                <label class="control-label">Account Name <i class="requred">*</i></label>
+                                <input type="text" maxlength="30" required="true" minlength="3" name="accountname" autofocus="" placeholder="Enter Account Name" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
