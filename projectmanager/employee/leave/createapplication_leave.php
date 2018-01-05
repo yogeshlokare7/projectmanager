@@ -129,9 +129,9 @@ $resultsetleaves = MysqlConnection::fetchAll("tbl_leave");
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">From Date </label>
+                                <label class="control-label">From Date<i class="requred">*</i> </label>
                                 <div class="input-group date" id="bs-datepicker-component">
-                                    <input type="text" name="fromDate" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" name="fromDate" required="true" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 </div>
                             </div>
                         </div>
