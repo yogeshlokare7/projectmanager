@@ -1,9 +1,6 @@
 <?php
-//
 $tblname = "tbl_salary";
-
-$resultset = MysqlConnection::fetchAll($tblname);
-//
+$resultset = MysqlConnection::fetchCustom("SELECT * FROM employeeid WHERE  employeeid = $id ");
 ?>
 <div class="row">
     <div class="col-sm-12">
@@ -17,16 +14,6 @@ $resultset = MysqlConnection::fetchAll($tblname);
         <div class="panel">
             <div class="panel-heading">
                 <span class="panel-title">View Salary</span>
-                <span class="panel-title">&nbsp;|&nbsp;</span>
-                <span class="panel-title">
-                    <a href="mainpage.php?pagename=create_salary" class="btn btn-success btn-xs btn-outline btn-flat btn-rounded">
-                        Add Salary Details
-                    </a>
-<!--                    <span class="panel-title">&nbsp;|&nbsp;</span>-->
-<!--                    <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModalExpense">
-                        Add Expense  
-                    </button>-->
-                </span>
             </div>
             <div class="panel-body">
                 <div class="table-primary">
@@ -60,12 +47,11 @@ $resultset = MysqlConnection::fetchAll($tblname);
                             <?php
                             $index = 1;
                             foreach ($resultset as $key => $value) {
-                                $empResult=MysqlConnection::fetchByPrimary("tbl_employee", $value["employeeid"], "id");
-                                
+                                $empResult = MysqlConnection::fetchByPrimary("tbl_employee", $value["employeeid"], "id");
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><?php echo $empResult["firstname"]." ".$empResult["lastname"] ?></td>
+                                    <td><?php echo $empResult["firstname"] . " " . $empResult["lastname"] ?></td>
                                     <td><?php echo $value["basic"] ?></td>
                                     <td><?php echo $value["hra"] ?></td>
                                     <td><?php echo $value["transportallowance"] ?></td>

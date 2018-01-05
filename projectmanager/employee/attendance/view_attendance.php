@@ -11,13 +11,26 @@ if (count($_POST) > 0) {
     if ($_POST["type"] == "in") {
         unset($_POST["type"]);
         $_POST["intime"] = date("y-m-d g:i:s");
-        MysqlConnection::insert($tblname, $_POST);
+
+        $_POST["inTimeHr"] = $_POST["time"];
+        unset($_POST["time"]);
+        if (validate($id)) {
+            MysqlConnection::insert($tblname, $_POST);
+        }
     } else {
-        $update = "UPDATE tbl_attendance SET outtime =  '" . date("y-m-d g:i:s") . "' WHERE empid =  $id AND entrydate = '" . date("y-m-d") . "' ";
+        $_POST["outTimeHr"] = $_POST["time"];
+        $outTimeHr = $_POST["time"];
+        unset($_POST["time"]);
+         $update = "UPDATE tbl_attendance SET  outTimeHr = '$outTimeHr '  WHERE empid =  $id AND entrydate = '" . date("y-m-d") . "' ";
         MysqlConnection::executeQuery($update);
     }
 }
 $resultset = MysqlConnection::fetchAll($tblname);
+
+function validate($id) {
+    echo $validate = "SELECT * FROM  `tbl_attendance` WHERE  `entrydate` =  '" . date("y-m-d") . "' AND empid = $id";
+    return count(MysqlConnection::fetchCustom($validate)) == 0 ? true : false;
+}
 ?>
 <div class="row">
     <div class="col-sm-12">
@@ -60,8 +73,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                     <td><?php echo $index ?></td>
                                     <td><?php echo $value["empid"] ?></td>
                                     <td><?php echo $value["empname"] ?></td>
-                                    <td><?php echo $value["intime"] ?></td>
-                                    <td><?php echo $value["outtime"] ?></td>
+                                    <td><?php echo $value["inTimeHr"] ?></td>
+                                    <td><?php echo $value["outTimeHr"] ?></td>
                                     <td>
                                         <?php echo $hourdiff = round((strtotime($value["intime"]) - strtotime($value["outtime"])) / 3600, 1); ?> Hr
 
@@ -105,10 +118,16 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Select Preference</label>
-                                <select class="form-control" name="type">
-                                    <option>Select Preference</option>
-                                    <option value="in">In Time</option>
-                                    <option value="out">Out Time</option>
+                                <select class="form-control" name="time">
+                                    <option>Select Time</option>
+                                    <?php
+                                    for ($index1 = 8; $index1 <= 12; $index1++) {
+                                        echo "<option value='$index1-AM'>$index1-AM</option>";
+                                    }
+                                    for ($index1 = 1; $index1 <= 9; $index1++) {
+                                        echo "<option value='$index1-PM'>$index1-PM</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
                         </div><!-- col-sm-6 -->
