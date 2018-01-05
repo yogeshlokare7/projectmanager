@@ -153,7 +153,7 @@ if (isset($_POST["btnValidate"]) || isset($_POST["btnSubmit"])) {
                                         foreach ($array as $key => $value) {
                                             ?>
                                             <td style="width: 10%;text-align: center">
-                                                <input type="text" 
+                                                <input type="text" onkeypress="return chkNumericKey(event)" maxlength="1"
                                                        name="txtTime<?php echo $index ?><?php echo $index2 ?>" 
                                                        value="<?php echo $_POST["txtTime$index" . "$index2"] ?>"
                                                        class="form-control" >
