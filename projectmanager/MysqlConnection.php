@@ -34,7 +34,7 @@ class MysqlConnection {
                 $keysset .= "`" . $key . "`,";
                 $valuesset .= "'" . trim($values) . "',";
             }
-            echo $query = " INSERT INTO $tbl (" . substr($keysset, 0, strlen($keysset) - 1) . ") VALUES (" . substr($valuesset, 0, strlen($valuesset) - 1) . ");";
+            $query = " INSERT INTO $tbl (" . substr($keysset, 0, strlen($keysset) - 1) . ") VALUES (" . substr($valuesset, 0, strlen($valuesset) - 1) . ");";
             MysqlConnection::executeQuery($query);
             return mysqli_insert_id();
         } catch (Exception $exc) {

@@ -96,7 +96,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Select Preference</label>
                                 <select class="form-control" name="type">
-                                    <option>Select Account Type</option>
+                                    <option>Select Preference</option>
                                     <option value="in">In Time</option>
                                     <option value="out">Out Time</option>
                                 </select>

@@ -110,8 +110,8 @@ $resultsetleaves = MysqlConnection::fetchAll("tbl_leave");
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Leave Type </label>
-                                <select class="form-control" name="leaveId">
+                                <label class="control-label">Leave Type<i class="requred">*</i> </label>
+                                <select class="form-control" required="true" name="leaveId">
                                     <option>Select Leave</option>
                                     <?php
                                     foreach ($resultsetleaves as $key => $value) {
@@ -137,9 +137,9 @@ $resultsetleaves = MysqlConnection::fetchAll("tbl_leave");
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">To Date </label>
+                                <label class="control-label">To Date <i class="requred">*</i> </label>
                                 <div class="input-group date" id="bs-datepicker-component-to">
-                                    <input type="text" name="toDate" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" name="toDate" required="true" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 </div>
                             </div>
                         </div>
@@ -147,8 +147,8 @@ $resultsetleaves = MysqlConnection::fetchAll("tbl_leave");
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Description</label>
-                                <textarea class="form-control" name="description"></textarea>
+                                <label class="control-label">Description<i class="requred">*</i></label>
+                                <textarea class="form-control" required="true" name="description"></textarea>
                             </div>
                         </div>
                     </div>

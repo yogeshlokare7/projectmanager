@@ -81,14 +81,14 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Name of Institute</label>
-                                <input type="text" id="institutename" name="institutename" autofocus="" class="form-control" required>
+                                <label class="control-label">Name of Institute<i class="requred">*</i></label>
+                                <input type="text" id="institutename" name="institutename" required="true" autofocus="" class="form-control" required>
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">University Name</label>
-                                <input type="text" id="universityname" name="universityname" class="form-control" required>
+                                <label class="control-label">University Name <i class="requred">*</i></label>
+                                <input type="text" id="universityname" required="true" name="universityname" class="form-control" required>
                             </div>
                         </div>
                     </div><!-- row -->
@@ -96,14 +96,14 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Qualification</label>
-                                <input type="text" id="qualification" name="qualification" autofocus="" class="form-control" required>
+                                <label class="control-label">Qualification<i class="requred">*</i></label>
+                                <input type="text" id="qualification" required="true" name="qualification" autofocus="" class="form-control" required>
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Percentage</label>
-                                <input type="text" id="percentage" name="percentage" class="form-control" required>
+                                <label class="control-label">Percentage<i class="requred">*</i></label>
+                                <input type="text" id="percentage" required="true" name="percentage" class="form-control" required>
                             </div>
                         </div>
                     </div><!-- row -->
@@ -126,8 +126,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Exam Seat No.</label>
-                                <input type="text" id="examseatno" name="examseatno" class="form-control" required>
+                                <label class="control-label">Exam Seat No.<i class="requred">*</i></label>
+                                <input type="text" id="examseatno" required="true" name="examseatno" class="form-control" required>
                             </div>
                         </div><!-- col-sm-6 -->
                     </div>
