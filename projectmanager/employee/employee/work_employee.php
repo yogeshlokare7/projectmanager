@@ -133,7 +133,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Contact No of Employer</label>
-                                <input type="text" name="contactnumber" class="form-control" required>
+                                <input type="text" name="contactnumber" onkeypress="return chkNumericKey(event)" class="form-control" required>
                             </div>
                         </div>
                     </div><!-- row -->

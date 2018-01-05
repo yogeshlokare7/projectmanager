@@ -103,7 +103,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Age</label>
-                                <input type="number" name="age" autofocus="" class="form-control" required>
+                                <input type="number"  onkeypress="return chkNumericKey(event)" name="age" autofocus="" class="form-control" required>
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
