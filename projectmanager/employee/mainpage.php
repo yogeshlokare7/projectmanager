@@ -49,6 +49,12 @@ if (count($explode) >= 2) {
     <link href="../assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
     <link href="../assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
     <link href="../assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+       <style>
+        .requred{
+            color: red;
+        }
+    </style>
+
 </head>
 <body class="theme-default main-menu-animated">
     <script>var init = [];</script>
