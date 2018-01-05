@@ -31,7 +31,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Last Name</label>
-                            <input type="text" name="lastname" class="form-control">
+                            <input type="text"  maxlength="30" name="lastname" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                 </div><!-- row -->
@@ -40,19 +40,19 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Email </label>
-                            <input type="email" name="emailid" class="form-control">
+                            <input type="email" maxlength="30" name="emailid" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Contact No</label>
-                            <input type="text" name="contactnumber" class="form-control">
+                            <input type="text" maxlength="30" onkeypress="return chkNumericKey(event)" name="contactnumber" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Alternate Contact No</label>
-                            <input type="text" name="altercontact" class="form-control">
+                            <input type="text" maxlength="30" onkeypress="return chkNumericKey(event)" name="altercontact" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                 </div><!-- row -->
@@ -73,7 +73,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Notice Period(Enter Days)</label>
-                            <input type="number" name="noticeperiod" class="form-control" step="0.01">
+                            <input type="number" name="noticeperiod" onkeypress="return chkNumericKey(event)" class="form-control" step="0.01">
                         </div>
                     </div><!-- col-sm-6 -->
                 </div><!-- row -->

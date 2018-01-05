@@ -89,7 +89,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Holiday Name </label>
-                                <input type="text" maxlength="50" name="holidayname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="30" name="holidayname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                         <div class="col-sm-12">
