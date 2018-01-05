@@ -74,7 +74,7 @@ if (isset($_GET["status"])) {
                                             Update
                                         </a>
                                     </td>
-                                      <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empCode"] ?></td>
                                     <td><?php echo $value["empname"] ?></td>
@@ -82,7 +82,7 @@ if (isset($_GET["status"])) {
                                     <td><?php echo $value["fromDate"] ?></td>
                                     <td><?php echo $value["toDate"] ?></td>
                                     <td><?php echo $value["totalDayes"] ?></td>
-                                    <td>
+                                    <td><?php echo $value["status"] ?>
                                         <?php
                                         switch ($value["status"]) {
                                             case 0:
@@ -93,8 +93,6 @@ if (isset($_GET["status"])) {
                                                 break;
                                             case 2:
                                                 echo "Pending";
-                                                break;
-                                            default:
                                                 break;
                                         }
                                         ?>

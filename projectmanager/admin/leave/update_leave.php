@@ -2,10 +2,16 @@
 $tblname = "tbl_leavapplication";
 $transactionid = base64_decode($_GET["transactionid"]);
 
-$fetchCustom = "SELECT * FROM ppms.tbl_leavapplication where id = $transactionid";
-$resultSetFetchCustom = MysqlConnection::fetchCustom($fetchCustom);
-
-print_r($_POST);
+if (isset($_POST["status"]) ) {
+    $status = $_POST["status"];
+    $feedback = $_POST["feedback"];
+    echo $updateQuery = "UPDATE tbl_leavapplication SET status = '$status' AND feedback = '$feedback' WHERE id = $transactionid ";
+    MysqlConnection::executeQuery($updateQuery);
+    header("location:mainpage.php?pagename=application_leave");
+} else {
+    $fetchCustom = "SELECT * FROM ppms.tbl_leavapplication where id = $transactionid";
+    $resultSetFetchCustom = MysqlConnection::fetchCustom($fetchCustom);
+}
 ?> 
 
 <div class="row">
