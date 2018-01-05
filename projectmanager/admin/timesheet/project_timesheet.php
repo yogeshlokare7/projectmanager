@@ -108,7 +108,7 @@ function validateTimesheet() {
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Charge Code  <i class="requred">*</i></label>
-                                <input type="text" maxlength="30" required="true" onkeypress="return chkNumericKey(event)" name="projectcode" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <input type="text" maxlength="30" required="true" name="projectcode" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->

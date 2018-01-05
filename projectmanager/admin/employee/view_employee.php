@@ -100,8 +100,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Middle Name  <i class="requred">*</i></label>
-                                <input type="text" minlength="3" maxlength="30" required="true" name="middlename" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Middle Name  </label>
+                                <input type="text" minlength="3" maxlength="30"  name="middlename" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
@@ -177,8 +177,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Permenent Address  <i class="requred">*</i></label>
-                                <textarea name="permenentaddress" required="true" class="form-control"></textarea>
+                                <label class="control-label">Permenent Address  </label>
+                                <textarea name="permenentaddress"  class="form-control"></textarea>
                             </div>
                         </div><!-- col-sm-6 -->
                     </div>
