@@ -22,7 +22,7 @@ if (count($_POST) > 0) {
 
     MysqlConnection::insert($tblname, $_POST);
 }
-$resultset = MysqlConnection::fetchAll($tblname);
+$resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_leavapplication WHERE empid = $id");
 $resultsetleaves = MysqlConnection::fetchAll("tbl_leave");
 ?>
 <div class="row">
