@@ -94,20 +94,20 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">First Name *</label>
-                                <input type="text" minlength="3" maxlength="30" name="firstname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">First Name  <i class="requred">*</i></label>
+                                <input type="text" minlength="3" maxlength="30"required="true" name="firstname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Middle Name *</label>
-                                <input type="text" minlength="3" maxlength="30" name="middlename" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Middle Name  <i class="requred">*</i></label>
+                                <input type="text" minlength="3" maxlength="30" required="true" name="middlename" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Last Name *</label>
-                                <input type="text"  minlength="3" maxlength="30" name="lastname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Last Name  <i class="requred">*</i></label>
+                                <input type="text"  minlength="3" maxlength="30" required="true" name="lastname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
@@ -115,13 +115,13 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Employee Code *</label>
-                                <input type="text" name="empId" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Employee Code  <i class="requred">*</i></label>
+                                <input type="text" name="empId" required="true" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Job Title *</label>
+                                <label class="control-label">Job Title  <i class="requred">*</i></label>
                                 <select class="form-control" name="jobtitle">
                                     <option>Select Account Type</option>
                                     <?php
@@ -138,8 +138,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Image *</label>
-                                <input type="file" name="image" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Image  <i class="requred">*</i></label>
+                                <input type="file" name="image" required="true" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -147,19 +147,19 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Email Id *</label>
-                                <input type="text" name="emailid" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Email Id  <i class="requred">*</i></label>
+                                <input type="text" name="emailid" required="true" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Contact Number *</label>
-                                <input type="text" name="contactnumber" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Contact Number  <i class="requred">*</i></label>
+                                <input type="text" name="contactnumber" required="true" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-4">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Alternet Number *</label>
+                                <label class="control-label">Alternet Number </label>
                                 <input type="text" name="altercontact" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
@@ -168,8 +168,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Current Address *</label>
-                                <textarea name="currentaddress" class="form-control"></textarea>
+                                <label class="control-label">Current Address  <i class="requred">*</i></label>
+                                <textarea name="currentaddress" required="true" class="form-control"></textarea>
                             </div>
                         </div><!-- col-sm-6 -->
                     </div>
@@ -177,8 +177,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Permenent Address *</label>
-                                <textarea name="permenentaddress" class="form-control"></textarea>
+                                <label class="control-label">Permenent Address  <i class="requred">*</i></label>
+                                <textarea name="permenentaddress" required="true" class="form-control"></textarea>
                             </div>
                         </div><!-- col-sm-6 -->
                     </div>

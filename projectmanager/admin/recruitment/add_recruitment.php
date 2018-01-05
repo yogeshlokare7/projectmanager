@@ -18,20 +18,20 @@ $resultset = MysqlConnection::fetchAll($tblname);
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
-                            <label class="control-label">First Name</label>
-                            <input type="text" maxlength="30" minlength="3" name="firstname" autofocus="" class="form-control">
+                            <label class="control-label">First Name <i class="requred">*</i></label>
+                            <input type="text" maxlength="30" minlength="3" required="true" name="firstname" autofocus="" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
-                            <label class="control-label">Middle Name</label>
-                            <input type="text" maxlength="30" minlength="3" name="middlename" class="form-control">
+                            <label class="control-label">Middle Name <i class="requred">*</i></label>
+                            <input type="text" maxlength="30" minlength="3" required="true" name="middlename" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
-                            <label class="control-label">Last Name</label>
-                            <input type="text"  maxlength="30" name="lastname" class="form-control">
+                            <label class="control-label">Last Name <i class="requred">*</i></label>
+                            <input type="text"  maxlength="30" required="true" name="lastname" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                 </div><!-- row -->
@@ -39,14 +39,14 @@ $resultset = MysqlConnection::fetchAll($tblname);
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
-                            <label class="control-label">Email </label>
-                            <input type="email" maxlength="30" name="emailid" class="form-control">
+                            <label class="control-label">Email  <i class="requred">*</i></label>
+                            <input type="email" maxlength="30" required="true" name="emailid" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
-                            <label class="control-label">Contact No</label>
-                            <input type="text" maxlength="30" onkeypress="return chkNumericKey(event)" name="contactnumber" class="form-control">
+                            <label class="control-label">Contact No <i class="requred">*</i></label>
+                            <input type="text" maxlength="30" required="true" onkeypress="return chkNumericKey(event)" name="contactnumber" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">

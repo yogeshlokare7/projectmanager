@@ -97,22 +97,22 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Project Id *</label>
-                                <input type="text" maxlength="30" name="projectid" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Project Id  <i class="requred">*</i></label>
+                                <input type="text" maxlength="30" required="true" name="projectid" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Charge Code *</label>
-                                <input type="text" maxlength="30"  onkeypress="return chkNumericKey(event)" name="projectcode" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Charge Code  <i class="requred">*</i></label>
+                                <input type="text" maxlength="30" required="true" onkeypress="return chkNumericKey(event)" name="projectcode" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Project Title *</label>
-                                <input type="text" maxlength="60" name="projectname" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Project Title  <i class="requred">*</i></label>
+                                <input type="text" maxlength="60" required="true" name="projectname" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
@@ -120,8 +120,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Description *</label>
-                                <textarea  name="description"  placeholder="Enter Data Here" class="form-control"></textarea>
+                                <label class="control-label">Description  <i class="requred">*</i></label>
+                                <textarea  name="description"  required="true" placeholder="Enter Data Here" class="form-control"></textarea>
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->
@@ -129,17 +129,17 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">From Date *</label>
+                                <label class="control-label">From Date  <i class="requred">*</i></label>
                                 <div class="input-group date" id="bs-datepicker-component">
-                                    <input type="text" name="fromdate" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" name="fromdate" required="true" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 </div>
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">To Date *</label>
+                                <label class="control-label">To Date  <i class="requred">*</i></label>
                                 <div class="input-group date" id="bs-datepicker-component-to">
-                                    <input type="text" name="todate" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" name="todate" required="true" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                 </div>
                             </div>
                         </div><!-- col-sm-6 -->
@@ -147,14 +147,14 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Per Day Work *</label>
-                                <input type="text" name="perdaywork" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Per Day Work  <i class="requred">*</i></label>
+                                <input type="text" name="perdaywork" maxlength="30" required="true" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Total Hr Work *</label>
-                                <input type="text" name="totalhrwork" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Total Hr Work  <i class="requred">*</i></label>
+                                <input type="text" name="totalhrwork" maxlength="30" required="true" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                     </div><!-- row -->

@@ -19,8 +19,8 @@ $resultsetEmployees = MysqlConnection::fetchAll("tbl_employee");
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-group no-margin-hr">
-                            <label class="control-label">Employee Name*:</label>
-                            <select name="employeeid"  autofocus="true" class="form-control" tabindex="1" required>
+                            <label class="control-label">Employee Name <i class="requred">*</i>:</label>
+                            <select name="employeeid" required="true" autofocus="true" class="form-control" tabindex="1" required>
                                 <option value="">Select</option>
                                 <?php
                                 foreach ($resultsetEmployees as $key => $value) {

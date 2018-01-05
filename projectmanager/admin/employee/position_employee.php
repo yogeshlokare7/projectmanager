@@ -78,8 +78,8 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Position Name *</label>
-                                <input type="text" maxlength="30" name="positionname" autofocus="" placeholder="Enter Position Name" class="form-control">
+                                <label class="control-label">Position Name <i class="requred">*</i> </label>
+                                <input type="text" maxlength="30" required="true" name="positionname" autofocus="" placeholder="Enter Position Name" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-12">

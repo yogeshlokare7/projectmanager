@@ -80,24 +80,24 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Leave Name *</label>
-                                <input type="text" maxlength="50" name="leavename" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Leave Name  <i class="requred">*</i></label>
+                                <input type="text" maxlength="50" required="true" name="leavename" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Description *</label>
-                                <textarea  name="description"  class="form-control"></textarea>
+                                <label class="control-label">Description  <i class="requred">*</i></label>
+                                <textarea  name="description"  required="true" class="form-control"></textarea>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Unit *</label>
-                                <input type="text" name="unit" maxlength="30" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
+                                <label class="control-label">Unit  <i class="requred">*</i></label>
+                                <input type="text" name="unit" maxlength="30" required="true" onkeypress="return chkNumericKey(event)" autofocus="" placeholder="Enter Data Here" class="form-control">
                             </div>
                         </div>
                     </div>
