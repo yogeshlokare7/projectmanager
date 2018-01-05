@@ -13,9 +13,6 @@ if (isset($_GET["status"])) {
         case "pending":
             $fetchCustom = "SELECT * FROM ppms.tbl_leavapplication where status = 2;";
             break;
-        default:
-            $resultset = MysqlConnection::fetchAll($tblname);
-            break;
     }
     $resultset = MysqlConnection::fetchCustom($fetchCustom);
 } else {

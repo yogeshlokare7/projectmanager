@@ -40,7 +40,6 @@
             <ul>
                 <li><a tabindex="-1" href="mainpage.php?pagename=position_employee"><span class="mm-text">Manage&nbsp;Position</span></a></li>
                 <li><a tabindex="-1" href="mainpage.php?pagename=view_employee"><span class="mm-text">Manage&nbsp;Employee</span></a></li>
-                <li><a tabindex="-1" href="mainpage.php?pagename=salary_employee"><span class="mm-text">Manage&nbsp;Salary</span></a></li>
             </ul>
         </li>
 

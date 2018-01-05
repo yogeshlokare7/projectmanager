@@ -14,6 +14,10 @@ if (count($_POST) > 0) {
     MysqlConnection::insert($tblname, $_POST);
 }
 $resultset = MysqlConnection::fetchAll($tblname);
+
+function validateTimesheet() {
+    $fetchCustom = "";
+}
 ?>
 <div class="row">
     <div class="col-sm-12">
@@ -59,7 +63,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                     <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="#"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["projectid"] ?></td>
                                     <td><?php echo $value["projectcode"] ?></td>
