@@ -7,6 +7,10 @@ if (count($_POST) > 0) {
     $_POST["active"] = "Y";
     MysqlConnection::insert($tblname, $_POST);
 }
+if($_GET['del'] > 0){
+    MysqlConnection::delete($tblname, $_GET['del']);
+    header("location:mainpage.php?pagename=view_employee");
+}
 $resultset = MysqlConnection::fetchAll($tblname);
 $resultsetposition = MysqlConnection::fetchAll("tbl_position");
 ?>
@@ -53,8 +57,8 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                          <td><a href="#"><i class="fa fa-times"></i></a></td>
-                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_employee&del=<?php echo $value["id"] ?>"><i class="fa fa-times"></i></a></td>
+                                    <td><a data-toggle="modal" data-target="#myModal" data-formid="<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empId"] ?></td>
                                     <td><?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?></td>
                                     <td><?php echo $value["image"] ?></td>
@@ -83,11 +87,19 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
 
 <!--- ADD POP UP DIALOG ---->
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+    <?php
+    $id = $_REQUEST['id'];
+    echo $id;
+    ?>
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title" id="myModalLabel">Employee Information</h4>
+                <?php
+    $id = $_REQUEST['id'];
+    echo $id;
+    ?>
             </div>
             <form name="frmEntry" method="post">
                 <div class="modal-body">

@@ -7,6 +7,10 @@ if (count($_POST) > 0) {
     MysqlConnection::insert($tblname, $_POST);
 }
 $resultset = MysqlConnection::fetchAll($tblname);
+if($_GET['del'] > 0){
+    MysqlConnection::delete($tblname, $_GET['del']);
+    header("location:mainpage.php?pagename=view_account");
+}
 ?>
 <div class="row">
     <div class="col-sm-12">
@@ -46,12 +50,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td>
-                                        <a 
-                                           onclick="setDeleteDetails('<?php echo $value["id"] ?>', '<?php echo $tblname ?>', 'view_account', '<?php echo $index ?>')" 
-                                           id="ui-bootbox-confirm<?php echo $index ?>"><i class="fa fa-times"></i>
-                                        </a>
-                                    </td>
+                                    <td><a href="mainpage.php?pagename=view_account&del=<?php echo $value["id"] ?>"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["accountname"] ?></td>
                                     <td><?php echo $value["accounttype"] ?></td>

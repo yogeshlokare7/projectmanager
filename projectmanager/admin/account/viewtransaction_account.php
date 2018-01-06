@@ -11,6 +11,12 @@ $resultset = MysqlConnection::fetchAll($tblname);
 
 $resultsetincome = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHERE accounttype = 'Income'");
 $resultsetexpense = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHERE accounttype = 'Expense'");
+
+if($_GET['del'] > 0){
+    MysqlConnection::delete($tblname, $_GET['del']);
+    header("location:mainpage.php?pagename=viewtransaction_account");
+}
+?>
 //
 ?>
 <div class="row">
@@ -60,7 +66,7 @@ $resultsetexpense = MysqlConnection::fetchCustom("SELECT * FROM tbl_account WHER
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=viewtransaction_account&del=<?php echo $value["id"] ?>"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["accountname"] ?></td>
                                     <td><?php echo $value["accounttype"] ?></td>

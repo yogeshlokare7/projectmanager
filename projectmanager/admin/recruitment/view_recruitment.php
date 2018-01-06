@@ -3,6 +3,12 @@
 $tblname = "tbl_recruitment";
 
 $resultset = MysqlConnection::fetchAll($tblname);
+
+if($_GET['del'] > 0){
+    MysqlConnection::delete($tblname, $_GET['del']);
+    header("location:mainpage.php?pagename=view_recruitment");
+}
+?>
 //
 ?>
 <div class="row">
@@ -56,7 +62,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_recruitment&del=<?php echo $value["id"] ?>"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["firstname"]." ".$value["lastname"] ?></td>
                                     <td><?php echo $value["emailid"] ?></td>

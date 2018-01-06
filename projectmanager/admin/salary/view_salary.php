@@ -1,8 +1,12 @@
 <?php
 //
 $tblname = "tbl_salary";
-
 $resultset = MysqlConnection::fetchAll($tblname);
+
+if($_GET['del'] > 0){
+    MysqlConnection::delete($tblname, $_GET['del']);
+    header("location:mainpage.php?pagename=view_salary");
+}
 //
 ?>
 <div class="row">
@@ -20,7 +24,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                 <span class="panel-title">&nbsp;|&nbsp;</span>
                 <span class="panel-title">
                     <a href="mainpage.php?pagename=create_salary" class="btn btn-success btn-xs btn-outline btn-flat btn-rounded">
-                        Add Salary Details
+                        Create Salary
                     </a>
 <!--                    <span class="panel-title">&nbsp;|&nbsp;</span>-->
 <!--                    <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModalExpense">
@@ -65,12 +69,11 @@ $resultset = MysqlConnection::fetchAll($tblname);
                             $index = 1;
                             foreach ($resultset as $key => $value) {
                                 $empResult=MysqlConnection::fetchByPrimary("tbl_employee", $value["employeeid"], "id");
-                                
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                          <td><a href="#"><i class="fa fa-times"></i></a></td>
-                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_salary&del=<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=create_salary&id=<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $empResult["firstname"]." ".$empResult["lastname"] ?></td>
                                     <td><?php echo $value["basic"] ?></td>
                                     <td><?php echo $value["hra"] ?></td>
