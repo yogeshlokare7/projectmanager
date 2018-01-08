@@ -9,8 +9,6 @@ if($_GET['del'] > 0){
     header("location:mainpage.php?pagename=view_recruitment");
 }
 ?>
-//
-?>
 <div class="row">
     <div class="col-sm-12">
         <script>
@@ -42,6 +40,7 @@ if($_GET['del'] > 0){
                                 <th>#</th>
                                 <th>#</th>
                                 <th>#</th>
+                                <th>#</th>
                                 <th>Employee Name</th>
                                 <th>Email</th>
                                 <th>Contact No</th>
@@ -64,6 +63,7 @@ if($_GET['del'] > 0){
                                     <td><?php echo $index ?></td>
                                     <td><a href="mainpage.php?pagename=view_recruitment&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=addshortlist_recruitment&shortlist=<?php echo $value["id"] ?>">Shortlist</a></td>
                                     <td><?php echo $value["firstname"]." ".$value["lastname"] ?></td>
                                     <td><?php echo $value["emailid"] ?></td>
                                     <td><?php echo $value["contactnumber"] ?></td>

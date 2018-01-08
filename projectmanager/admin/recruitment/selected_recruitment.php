@@ -1,17 +1,36 @@
+<?php
+//
+$tblname = "tbl_recruitment";
+$fetchCustom = "SELECT * FROM $tblname where finalselected = 'Y';";
+$resultset = MysqlConnection::fetchCustom($fetchCustom);
+
+if($_GET['del'] > 0){
+    MysqlConnection::delete($tblname, $_GET['del']);
+    header("location:mainpage.php?pagename=selected_recruitment");
+}
+?>
 <div class="row">
     <div class="col-sm-12">
         <script>
             init.push(function () {
                 $('#jq-datatables-example').dataTable();
-                $('#jq-datatables-example_wrapper .table-caption').text('<?php echo $explode[1] ?> Information');
+                $('#jq-datatables-example_wrapper .table-caption').text('View Recruitment');
                 $('#jq-datatables-example_wrapper .dataTables_filter input').attr('placeholder', 'Search...');
             });
         </script>
         <div class="panel">
             <div class="panel-heading">
-                <span class="panel-title">View Account</span>
+                <span class="panel-title">View Recruitment</span>
                 <span class="panel-title">&nbsp;|&nbsp;</span>
-                <span class="panel-title">View Account</span>
+                <span class="panel-title">
+                    <a href="mainpage.php?pagename=add_recruitment" class="btn btn-success btn-xs btn-outline btn-flat btn-rounded">
+                       Add Recruitment
+                    </a>
+<!--                    <span class="panel-title">&nbsp;|&nbsp;</span>-->
+<!--                    <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModalExpense">
+                        Add Expense  
+                    </button>-->
+                </span>
             </div>
             <div class="panel-body">
                 <div class="table-primary">
@@ -21,31 +40,40 @@
                                 <th>#</th>
                                 <th>#</th>
                                 <th>#</th>
-                                <th>#</th>
-                                <th>Rendering engine</th>
-                                <th>Browser</th>
-                                <th>Platform(s)</th>
-                                <th>Engine version</th>
-                                <th>CSS grade</th>
+                                <th>Employee Name</th>
+                                <th>Email</th>
+                                <th>Contact No</th>
+                                <th>Post Applied</th>
+                                <th>Experience</th>
+                                <th>Current CTC</th>
+                                <th>Expected CTC</th>
+                                <th>Notice Period</th>
+                                <th>Selected</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            for ($index = 0; $index < 50; $index++) {
+                            $index = 1;
+                            foreach ($resultset as $key => $value) {
+                                $empResult=MysqlConnection::fetchByPrimary("tbl_employee", $value["employeeid"], "id");
+                                
                                 ?>
                                 <tr class="odd gradeX">
-                                    <td>#</td>
-                                    <td>#</td>
-                                    <td><a href="#"><i class="fa fa-times"></i></a></td>
+                                    <td><?php echo $index ?></td>
+                                    <td><a href="mainpage.php?pagename=view_recruitment&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
-                                    <td>Trident <?php echo $index ?></td>
-                                    <td>Internet Explorer 4.0</td>
-                                    <td>Win 95+</td>
-                                    <td class="center"> 4</td>
-                                    <td class="center">X</td>
+                                    <td><?php echo $value["firstname"]." ".$value["lastname"] ?></td>
+                                    <td><?php echo $value["emailid"] ?></td>
+                                    <td><?php echo $value["contactnumber"] ?></td>
+                                    <td><?php echo $value["jobtitle"] ?></td>
+                                    <td><?php echo $value["totalexperience"] ?></td>
+                                    <td><?php echo $value["currentctc"] ?></td>
+                                    <td><?php echo $value["expectedctc"] ?></td>
+                                    <td><?php echo $value["noticeperiod"] ?></td>
+                                    <td><?php echo $value["isselected"] ?></td>
                                 </tr>
-
                                 <?php
+                                $index++;
                             }
                             ?>
                         </tbody>
@@ -55,3 +83,4 @@
         </div>
     </div>
 </div>
+

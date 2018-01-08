@@ -2,6 +2,9 @@
 $tblname = "tbl_recruitment";
 if (count($_POST) > 0) {
     unset($_POST["btnSubmit"]);
+    $_POST["entrydate"] = date("y-m-d");
+    $_POST["updatedate"] = date("y-m-d");
+    $_POST["active"] = "Y";
     MysqlConnection::insert($tblname, $_POST);
     header("location:mainpage.php?pagename=view_recruitment");
 }
@@ -19,7 +22,7 @@ $resultset = MysqlConnection::fetchAll($tblname);
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">First Name <i class="requred">*</i></label>
-                            <input type="text" maxlength="30" minlength="3" required="true" name="firstname" autofocus="" class="form-control">
+                            <input type="text" maxlength="30" minlength="3" required="true" name="firstname"  autofocus="" class="form-control">
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
