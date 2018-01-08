@@ -67,9 +67,9 @@ class MysqlConnection {
      * @param String $tbl table name
      * @param int  $id primary key of the table
      */
-    static function delete($tbl = "", $id = '', $pkcolumn) {
+    static function delete($tbl , $id ) {
         try {
-            $query = "DELETE FROM $tbl where txtId = $id ";
+            echo $query = "DELETE FROM $tbl where id = $id ";
             MysqlConnection::executeQuery($query);
         } catch (Exception $exc) {
             echo "<span style='color:red'>SQL QUERY ERROR !!! DELETE !!!<span>";
