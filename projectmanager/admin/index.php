@@ -69,7 +69,7 @@ if (isset($_POST) && $_POST["signin_username"] != "") {
                 <!-- Form -->
                 <form method="post" id="signin-form_id">
                       <a href="index.php" class="logo">
-                    <img src="https://jerp.jmrinfotech.com/images/hrms.jpg" alt="" style="margin-top: -5px;">&nbsp;
+                    <img src="assets/demo/hrmsLogo.jpg" alt="" style="margin-top: -5px;">&nbsp;
                       </a>
                     <div class="signin-text">
                         <span>Sign In to your account</span>
