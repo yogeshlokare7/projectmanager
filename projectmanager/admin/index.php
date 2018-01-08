@@ -49,10 +49,11 @@ if (isset($_POST) && $_POST["signin_username"] != "") {
             <div class="signin-info">
                 <a href="index.php" class="logo">
                     <img src="assets/demo/logo-big.png" alt="" style="margin-top: -5px;">&nbsp;
-                    MJB Info PPMS
+                    MJB Info HRMS
                 </a> <!-- / .logo -->
                 <div class="slogan">
                     Simple. Flexible. Powerful.
+                    
                 </div> <!-- / .slogan -->
                 <ul>
                     <li><i class="fa fa-sitemap signin-icon"></i> Flexible modular structure</li>
@@ -68,9 +69,9 @@ if (isset($_POST) && $_POST["signin_username"] != "") {
                 <p style="color: red"><?php echo $error ?></p>    
                 <!-- Form -->
                 <form method="post" id="signin-form_id">
-                      <a href="index.php" class="logo">
-                    <img src="assets/demo/hrmsLogo.jpg" alt="" style="margin-top: -5px;">&nbsp;
-                      </a>
+                    <a href="index.php" class="logo">
+                        <center><img src="../assets/demo/hrms_logo.jpg" alt=""></center>
+                    </a>
                     <div class="signin-text">
                         <span>Sign In to your account</span>
                     </div> <!-- / .signin-text -->
