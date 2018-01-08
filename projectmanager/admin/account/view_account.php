@@ -1,17 +1,28 @@
 <?php
 $tblname = "tbl_account";
 if (count($_POST) > 0) {
-    $_POST["entrydate"] = date("y-m-d");
     $_POST["updatedate"] = date("y-m-d");
     $_POST["active"] = "Y";
-    MysqlConnection::insert($tblname, $_POST);
+    if ($_GET['id'] != null && $_GET['id'] > 0) {
+        $update = "UPDATE $tblname set accountname='" . $_POST["accountname"] . "', accounttype='" . $_POST["accounttype"] . "' WHERE id= '" . $_GET['id'] . "'";
+        print_r($update);
+        MysqlConnection::executeQuery($update);
+    } else {
+        $_POST["entrydate"] = date("y-m-d");
+        MysqlConnection::insert($tblname, $_POST);
+    }
 }
 $resultset = MysqlConnection::fetchAll($tblname);
-if($_GET['del'] > 0){
-    MysqlConnection::delete($tblname, $_GET['del']);
+if(isset($_GET["del"])){
+    MysqlConnection::delete($tblname, base64_decode($_GET['del']));
     header("location:mainpage.php?pagename=view_account");
 }
+if ($_GET['id'] > 0) {
+    $resultsetUpdate = MysqlConnection::fetchByPrimary($tblname, base64_decode($_GET['id']), "id");
+}
 ?>
+
+
 <div class="row">
     <div class="col-sm-12">
         <script>
@@ -50,8 +61,8 @@ if($_GET['del'] > 0){
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><a href="mainpage.php?pagename=view_account&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
-                                    <td><a href="#"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_account&del=<?php echo base64_encode($value["id"]) ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_account&id=<?php echo base64_encode($value["id"]) ?>"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["accountname"] ?></td>
                                     <td><?php echo $value["accounttype"] ?></td>
                                     <td><?php echo $value["entrydate"] ?></td>
@@ -83,16 +94,16 @@ if($_GET['del'] > 0){
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Account Name <i class="requred">*</i></label>
-                                <input type="text" maxlength="30" required="true" minlength="3" name="accountname" autofocus="" placeholder="Enter Account Name" class="form-control">
+                                <input type="text" maxlength="30" required="true" minlength="3" name="accountname" value="<?php echo $resultsetUpdate["accountname"] ?>" autofocus="" placeholder="Enter Account Name" class="form-control">
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
                                 <label class="control-label">Select Account Type</label>
-                                <select class="form-control" name="accounttype">
-                                    <option>Select Account Type</option>
-                                    <option>Income</option>
-                                    <option>Expense</option>
+                                <select class="form-control" name="accounttype" required>
+                                    <option value="">Select Account Type</option>
+                                    <option value="Income">Income</option>
+                                    <option value="Expense">Expense</option>
                                 </select>
                             </div>
                         </div><!-- col-sm-6 -->
