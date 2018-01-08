@@ -35,7 +35,7 @@ if($_GET['del'] > 0){
                                 <th>#</th>
                                 <th>#</th>
                                 <th>#</th>
-                                <th>Employee Name</th>
+                                <th>Candidate Name</th>
                                 <th>Interviewer</th>
                                 <th>Position Applied</th>
                                 <th>Interview Date</th>
@@ -46,14 +46,15 @@ if($_GET['del'] > 0){
                             <?php
                             $index = 1;
                             foreach ($resultset as $key => $value) {
-                                $candidateResult=MysqlConnection::fetchByPrimary("tbl_recruitment", $value["empid"], "id");
+                                $empResult=MysqlConnection::fetchByPrimary("tbl_employee", $value["empid"], "id");
+                                $candidateResult=MysqlConnection::fetchByPrimary("tbl_recruitment", $value["candidateid"], "id");
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
                                     <td><a href="mainpage.php?pagename=interview_recruitment&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
-                                       <td><a href="mainpage.php?pagename=addinterview_recruitment&id=<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=addinterview_recruitment&id=<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $candidateResult["firstname"]." ".$candidateResult["lastname"] ?></td>
-                                    <td><?php echo $value["interviewername"] ?></td>
+                                    <td><?php echo $empResult["firstname"]." ".$empResult["lastname"] ?></td>
                                     <td><?php echo $value["jobposition"] ?></td>
                                     <td><?php echo $value["interviewdate"] ?></td>
                                     <td><?php echo $value["interviewtime"] ?></td>

@@ -15,12 +15,12 @@ if (count($_POST) > 0) {
     }
     header("location:mainpage.php?pagename=interview_recruitment");
 }
-
+$resultsetEmployees = MysqlConnection::fetchAll("tbl_employee");
 if (isset($_GET["id"])) {
     $resultsetEdit = MysqlConnection::fetchByPrimary($tblname, $_GET['id'], "id");
-    $resultsetCandidate = MysqlConnection::fetchByPrimary("tbl_recruitment", $resultsetEdit['empid'], "id"); 
-}else{
-   $resultsetCandidate = MysqlConnection::fetchByPrimary("tbl_recruitment", $_GET['recruitmentid'], "id"); 
+    $resultsetCandidate = MysqlConnection::fetchByPrimary("tbl_recruitment", $resultsetEdit['empid'], "id");
+} else {
+    $resultsetCandidate = MysqlConnection::fetchByPrimary("tbl_recruitment", $_GET['recruitmentid'], "id");
 }
 ?>
 <div class="row">
@@ -34,7 +34,7 @@ if (isset($_GET["id"])) {
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Candidate Name <i class="requred">*</i>:</label>
-                            <select name="empId" required="true" autofocus="true" class="form-control" tabindex="1" readonly="true">
+                            <select name="candidateid" required="true" autofocus="true" class="form-control" tabindex="1" readonly="true">
                                 <option value="<?php echo $resultsetCandidate["id"] ?>">
                                     <?php echo $resultsetCandidate["firstname"] ?> <?php echo $resultsetCandidate["middlename"] ?> <?php echo $resultsetCandidate["lastname"] ?> 
                                 </option>
@@ -59,7 +59,18 @@ if (isset($_GET["id"])) {
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Interviewer</label>
-                            <input type="text" name="interviewername" value="<?php echo $resultsetEdit["interviewername"] ?>" required="true" autofocus="true" class="form-control">
+                            <select name="empId" autofocus="true" class="form-control" tabindex="1" required>
+                                <option value="">Select</option>
+                                <?php
+                                foreach ($resultsetEmployees as $key => $value) {
+                                    ?>
+                                    <option value="<?php echo $value["id"] ?>">
+                                        <?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?> 
+                                    </option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div><!-- col-sm-6 -->
                     <div class="col-sm-4">
@@ -73,7 +84,7 @@ if (isset($_GET["id"])) {
                     <div class="col-sm-4">
                         <div class="form-group no-margin-hr">
                             <label class="control-label">Interview Time</label>
-                             <div class="input-group date" id="bs-datepicker-component-to">
+                            <div class="input-group date" id="bs-datepicker-component-to">
                                 <input type="text" alue="<?php echo $resultsetEdit["interviewtime"] ?>" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                             </div>
                         </div>
