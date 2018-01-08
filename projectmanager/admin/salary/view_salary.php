@@ -72,7 +72,7 @@ if($_GET['del'] > 0){
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><a href="mainpage.php?pagename=view_salary&del=<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_salary&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><span class="mm-text"><i class="fa fa-times"></i></a></td>
                                     <td><a href="mainpage.php?pagename=create_salary&id=<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $empResult["firstname"]." ".$empResult["lastname"] ?></td>
                                     <td><?php echo $value["basic"] ?></td>

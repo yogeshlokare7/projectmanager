@@ -57,7 +57,7 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><a href="mainpage.php?pagename=view_employee&del=<?php echo $value["id"] ?>"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=view_employee&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
                                     <td><a data-toggle="modal" data-target="#myModal" data-formid="<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empId"] ?></td>
                                     <td><?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?></td>

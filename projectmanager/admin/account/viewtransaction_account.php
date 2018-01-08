@@ -66,7 +66,7 @@ if($_GET['del'] > 0){
                                 ?>
                                 <tr class="odd gradeX">
                                     <td><?php echo $index ?></td>
-                                    <td><a href="mainpage.php?pagename=viewtransaction_account&del=<?php echo $value["id"] ?>"><i class="fa fa-times"></i></a></td>
+                                    <td><a href="mainpage.php?pagename=viewtransaction_account&del=<?php echo $value["id"] ?>" onClick="return confirm('Are you sure you want to delete?')"><i class="fa fa-times"></i></a></td>
                                     <td><a href="#"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["accountname"] ?></td>
                                     <td><?php echo $value["accounttype"] ?></td>
