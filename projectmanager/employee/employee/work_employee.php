@@ -25,7 +25,7 @@ $resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_employee_workinfo W
                 <span class="panel-title">Work Experience</span>
                 <span class="panel-title">&nbsp;|&nbsp;</span>
                 <span class="panel-title">
-                    <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModal">Add Work Experience</button>
+                    <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModal">Add Previous Work Experience</button>
                 </span>
             </div>
             <div class="panel-body">
@@ -74,7 +74,7 @@ $resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_employee_workinfo W
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Add Work Experience</h4>
+                <h4 class="modal-title" id="myModalLabel">Add Previous Work Experience</h4>
             </div>
             <form name="frmEntry" method="post">
                 <div class="modal-body">
@@ -92,18 +92,23 @@ $resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_employee_workinfo W
                             </div>
                         </div>
                     </div><!-- row -->
+                    
 
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">From</label>
-                                <input type="date" name="fromdate" autofocus="" class="form-control" required>
+                                <label class="control-label">Joining Date</label>
+                                 <div class="input-group date" id="bs-datepicker-component">
+                                    <input type="text" name="fromdate" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
                             </div>
                         </div><!-- col-sm-6 -->
                         <div class="col-sm-6">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">To</label>
-                                <input type="date" name="todate" class="form-control" required>
+                                <label class="control-label">Last Date</label>
+                                 <div class="input-group date" id="bs-datepicker-component-to">
+                                    <input type="text" name="todate" class="form-control"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div><!-- row -->
@@ -163,7 +168,7 @@ $resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_employee_workinfo W
                     </div>
                 </div>  
                 <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" value="Save"/>  
+                    <input type="submit" class="btn btn-primary" value="Save and Finish"/>  
                     <button type="button"  class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
             </form>
@@ -171,3 +176,9 @@ $resultset = MysqlConnection::fetchCustom("SELECT * FROM tbl_employee_workinfo W
     </div>  
 </div>  
 <!--- ADD POP UP DIALOG ---->
+<script>
+    init.push(function () {
+        $('#bs-datepicker-component').datepicker();
+        $('#bs-datepicker-component-to').datepicker();
+    });
+</script>
