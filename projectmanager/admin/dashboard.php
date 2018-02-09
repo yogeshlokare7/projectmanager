@@ -65,35 +65,35 @@
             });
         </script>
         <!-- / Javascript -->
-
+<!--
         <div class="stat-panel">
             <div class="stat-row">
-                <!-- Small horizontal padding, bordered, without right border, top aligned text -->
+                 Small horizontal padding, bordered, without right border, top aligned text 
                 <div class="stat-cell col-sm-4 padding-sm-hr bordered no-border-r valign-top">
-                    <!-- Small padding, without top padding, extra small horizontal padding -->
+                     Small padding, without top padding, extra small horizontal padding 
                     <h4 class="padding-sm no-padding-t padding-xs-hr"><i class="fa fa-cloud-upload text-primary"></i>&nbsp;&nbsp;Uploads</h4>
-                    <!-- Without margin -->
+                     Without margin 
                     <ul class="list-group no-margin">
-                        <!-- Without left and right borders, extra small horizontal padding, without background, no border radius -->
+                         Without left and right borders, extra small horizontal padding, without background, no border radius 
                         <li class="list-group-item no-border-hr padding-xs-hr no-bg no-border-radius">
                             Documents <span class="label label-pa-purple pull-right">34</span>
-                        </li> <!-- / .list-group-item -->
-                        <!-- Without left and right borders, extra small horizontal padding, without background -->
+                        </li>  / .list-group-item 
+                         Without left and right borders, extra small horizontal padding, without background 
                         <li class="list-group-item no-border-hr padding-xs-hr no-bg">
                             Audio <span class="label label-danger pull-right">128</span>
-                        </li> <!-- / .list-group-item -->
-                        <!-- Without left and right borders, without bottom border, extra small horizontal padding, without background -->
+                        </li>  / .list-group-item 
+                         Without left and right borders, without bottom border, extra small horizontal padding, without background 
                         <li class="list-group-item no-border-hr no-border-b padding-xs-hr no-bg">
                             Videos <span class="label label-success pull-right">12</span>
-                        </li> <!-- / .list-group-item -->
+                        </li>  / .list-group-item 
                     </ul>
-                </div> <!-- /.stat-cell -->
-                <!-- Primary background, small padding, vertically centered text -->
+                </div>  /.stat-cell 
+                 Primary background, small padding, vertically centered text 
                 <div class="stat-cell col-sm-8 bg-primary padding-sm valign-middle">
                     <div id="hero-graph" class="graph" style="height: 230px;"></div>
                 </div>
             </div>
-        </div> <!-- /.stat-panel -->
+        </div>  /.stat-panel -->
         <!-- /5. $UPLOADS_CHART -->
 
         <!-- 6. $EASY_PIE_CHARTS ===========================================================================
@@ -101,7 +101,7 @@
                                         Easy Pie charts
         -->
         <!-- Javascript -->
-        <script>
+<!--        <script>
             init.push(function () {
                 // Easy Pie Charts
                 var easyPieChartDefaults = {
@@ -122,91 +122,91 @@
                     barColor: PixelAdmin.settings.consts.COLORS[1]
                 }));
             });
-        </script>
+        </script>-->
         <!-- / Javascript -->
 
-        <div class="row">
+<!--        <div class="row">
             <div class="col-xs-4">
-                <!-- Centered text -->
+                 Centered text 
                 <div class="stat-panel text-center">
                     <div class="stat-row">
-                        <!-- Dark gray background, small padding, extra small text, semibold text -->
+                         Dark gray background, small padding, extra small text, semibold text 
                         <div class="stat-cell bg-dark-gray padding-sm text-xs text-semibold">
                             <i class="fa fa-globe"></i>&nbsp;&nbsp;BANDWIDTH
                         </div>
-                    </div> <!-- /.stat-row -->
+                    </div>  /.stat-row 
                     <div class="stat-row">
-                        <!-- Bordered, without top border, without horizontal padding -->
+                         Bordered, without top border, without horizontal padding 
                         <div class="stat-cell bordered no-border-t no-padding-hr">
                             <div class="pie-chart" data-percent="43" id="easy-pie-chart-1">
                                 <div class="pie-chart-label">12.3TB</div>
                             </div>
                         </div>
-                    </div> <!-- /.stat-row -->
-                </div> <!-- /.stat-panel -->
+                    </div>  /.stat-row 
+                </div>  /.stat-panel 
             </div>
             <div class="col-xs-4">
                 <div class="stat-panel text-center">
                     <div class="stat-row">
-                        <!-- Dark gray background, small padding, extra small text, semibold text -->
+                         Dark gray background, small padding, extra small text, semibold text 
                         <div class="stat-cell bg-dark-gray padding-sm text-xs text-semibold">
                             <i class="fa fa-flash"></i>&nbsp;&nbsp;PICK LOAD
                         </div>
-                    </div> <!-- /.stat-row -->
+                    </div>  /.stat-row 
                     <div class="stat-row">
-                        <!-- Bordered, without top border, without horizontal padding -->
+                         Bordered, without top border, without horizontal padding 
                         <div class="stat-cell bordered no-border-t no-padding-hr">
                             <div class="pie-chart" data-percent="93" id="easy-pie-chart-2">
                                 <div class="pie-chart-label">93%</div>
                             </div>
                         </div>
-                    </div> <!-- /.stat-row -->
-                </div> <!-- /.stat-panel -->
+                    </div>  /.stat-row 
+                </div>  /.stat-panel 
             </div>
             <div class="col-xs-4">
                 <div class="stat-panel text-center">
                     <div class="stat-row">
-                        <!-- Dark gray background, small padding, extra small text, semibold text -->
+                         Dark gray background, small padding, extra small text, semibold text 
                         <div class="stat-cell bg-dark-gray padding-sm text-xs text-semibold">
                             <i class="fa fa-cloud"></i>&nbsp;&nbsp;USED RAM
                         </div>
-                    </div> <!-- /.stat-row -->
+                    </div>  /.stat-row 
                     <div class="stat-row">
-                        <!-- Bordered, without top border, without horizontal padding -->
+                         Bordered, without top border, without horizontal padding 
                         <div class="stat-cell bordered no-border-t no-padding-hr">
                             <div class="pie-chart" data-percent="75" id="easy-pie-chart-3">
                                 <div class="pie-chart-label">12GB</div>
                             </div>
                         </div>
-                    </div> <!-- /.stat-row -->
-                </div> <!-- /.stat-panel -->
+                    </div>  /.stat-row 
+                </div>  /.stat-panel 
             </div>
         </div>
     </div>
-    <!-- /6. $EASY_PIE_CHARTS -->
+     /6. $EASY_PIE_CHARTS 
 
     <div class="col-md-4">
         <div class="row">
 
-            <!-- 7. $EARNED_TODAY_STAT_PANEL ===================================================================
+             7. $EARNED_TODAY_STAT_PANEL ===================================================================
             
                                                     Earned today stat panel
-            -->
+            
             <div class="col-sm-4 col-md-12">
                 <div class="stat-panel">
-                    <!-- Danger background, vertically centered text -->
+                     Danger background, vertically centered text 
                     <div class="stat-cell bg-danger valign-middle">
-                        <!-- Stat panel bg icon -->
+                         Stat panel bg icon 
                         <i class="fa fa-trophy bg-icon"></i>
-                        <!-- Extra large text -->
+                         Extra large text 
                         <span class="text-xlg"><span class="text-lg text-slim">$</span><strong>147</strong></span><br>
-                        <!-- Big text -->
+                         Big text 
                         <span class="text-bg">Earned today</span><br>
-                        <!-- Small text -->
+                         Small text 
                         <span class="text-sm"><a href="#">See details in your profile</a></span>
-                    </div> <!-- /.stat-cell -->
-                </div> <!-- /.stat-panel -->
-            </div>
+                    </div>  /.stat-cell 
+                </div>  /.stat-panel 
+            </div>-->
             <!-- /7. $EARNED_TODAY_STAT_PANEL -->
 
 
@@ -214,8 +214,8 @@
             
                                                     Retweets graph stat panel
             -->
-            <div class="col-sm-4 col-md-12">
-                <!-- Javascript -->
+<!--            <div class="col-sm-4 col-md-12">
+                 Javascript 
                 <script>
                     init.push(function () {
                         $("#stats-sparklines-3").pixelSparkline([275, 490, 397, 487, 339, 403, 402, 312, 300], {
@@ -235,53 +235,53 @@
                         });
                     });
                 </script>
-                <!-- / Javascript -->
+                 / Javascript 
 
                 <div class="stat-panel">
                     <div class="stat-row">
-                        <!-- Purple background, small padding -->
+                         Purple background, small padding 
                         <div class="stat-cell bg-pa-purple padding-sm">
-                            <!-- Extra small text -->
+                             Extra small text 
                             <div class="text-xs" style="margin-bottom: 5px;">RETWEETS GRAPH</div>
                             <div class="stats-sparklines" id="stats-sparklines-3" style="width: 100%"></div>
                         </div>
-                    </div> <!-- /.stat-row -->
+                    </div>  /.stat-row 
                     <div class="stat-row">
-                        <!-- Bordered, without top border, horizontally centered text -->
+                         Bordered, without top border, horizontally centered text 
                         <div class="stat-counters bordered no-border-t text-center">
-                            <!-- Small padding, without horizontal padding -->
+                             Small padding, without horizontal padding 
                             <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-                                <!-- Big text -->
+                                 Big text 
                                 <span class="text-bg"><strong>312</strong></span><br>
-                                <!-- Extra small text -->
+                                 Extra small text 
                                 <span class="text-xs text-muted">TWEETS</span>
                             </div>
-                            <!-- Small padding, without horizontal padding -->
+                             Small padding, without horizontal padding 
                             <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-                                <!-- Big text -->
+                                 Big text 
                                 <span class="text-bg"><strong>1000</strong></span><br>
-                                <!-- Extra small text -->
+                                 Extra small text 
                                 <span class="text-xs text-muted">FOLLOWERS</span>
                             </div>
-                            <!-- Small padding, without horizontal padding -->
+                             Small padding, without horizontal padding 
                             <div class="stat-cell col-xs-4 padding-sm no-padding-hr">
-                                <!-- Big text -->
+                                 Big text 
                                 <span class="text-bg"><strong>523</strong></span><br>
-                                <!-- Extra small text -->
+                                 Extra small text 
                                 <span class="text-xs text-muted">FOLLOWING</span>
                             </div>
-                        </div> <!-- /.stat-counters -->
-                    </div> <!-- /.stat-row -->
-                </div> <!-- /.stat-panel -->
-            </div>
+                        </div>  /.stat-counters 
+                    </div>  /.stat-row 
+                </div>  /.stat-panel 
+            </div>-->
             <!-- /8. $RETWEETS_GRAPH_STAT_PANEL -->
 
             <!-- 9. $UNIQUE_VISITORS_STAT_PANEL ================================================================
             
                                                     Unique visitors stat panel
             -->
-            <div class="col-sm-4 col-md-12">
-                <!-- Javascript -->
+<!--            <div class="col-sm-4 col-md-12">
+                 Javascript 
                 <script>
                     init.push(function () {
                         $("#stats-sparklines-2").pixelSparkline(
@@ -295,47 +295,47 @@
                         });
                     });
                 </script>
-                <!-- / Javascript -->
+                 / Javascript 
 
                 <div class="stat-panel">
                     <div class="stat-row">
-                        <!-- Warning background -->
+                         Warning background 
                         <div class="stat-cell bg-warning">
-                            <!-- Big text -->
+                             Big text 
                             <span class="text-bg">11% more</span><br>
-                            <!-- Small text -->
+                             Small text 
                             <span class="text-sm">Unique visitors today</span>
                         </div>
-                    </div> <!-- /.stat-row -->
+                    </div>  /.stat-row 
                     <div class="stat-row">
-                        <!-- Warning background, small padding, without top padding, horizontally centered text -->
+                         Warning background, small padding, without top padding, horizontally centered text 
                         <div class="stat-cell bg-warning padding-sm no-padding-t text-center">
                             <div id="stats-sparklines-2" class="stats-sparklines" style="width: 100%"></div>
                         </div>
-                    </div> <!-- /.stat-row -->
-                </div> <!-- /.stat-panel -->
+                    </div>  /.stat-row 
+                </div>  /.stat-panel 
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!-- /9. $UNIQUE_VISITORS_STAT_PANEL -->
 
 <!-- Page wide horizontal line -->
-<hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
+<!--<hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
 
-<div class="row">
+<div class="row">-->
 
     <!-- 10. $SUPPORT_TICKETS ==========================================================================
     
                             Support tickets
     -->
     <!-- Javascript -->
-    <script>
+<!--    <script>
         init.push(function () {
             $('#dashboard-support-tickets .panel-body > div').slimScroll({height: 300, alwaysVisible: true, color: '#888', allowPageScroll: true});
         })
     </script>
-    <!-- / Javascript -->
+     / Javascript 
 
     <div class="col-md-6">
         <div class="panel panel-success widget-support-tickets" id="dashboard-support-tickets">
@@ -344,9 +344,9 @@
                 <div class="panel-heading-controls">
                     <div class="panel-heading-text"><a href="#">15 new tickets</a></div>
                 </div>
-            </div> <!-- / .panel-heading -->
+            </div>  / .panel-heading 
             <div class="panel-body tab-content-padding">
-                <!-- Panel padding, without vertical padding -->
+                 Panel padding, without vertical padding 
                 <div class="panel-padding no-padding-vr">
 
                     <div class="ticket">
@@ -355,7 +355,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#" title="">Timothy Owens</a> today
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-warning ticket-label">Pending</span>
@@ -363,7 +363,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Denise Steiner</a> 2 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-info ticket-label">In progress</span>
@@ -373,7 +373,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Robert Jang</a> 3 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-danger ticket-label">Rejected</span>
@@ -381,7 +381,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Robert Jang</a> 4 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-success ticket-label">Completed</span>
@@ -389,7 +389,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Timothy Owens</a> 5 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-success ticket-label">Completed</span>
@@ -397,7 +397,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#" title="">Timothy Owens</a> today
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-warning ticket-label">Pending</span>
@@ -405,7 +405,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Denise Steiner</a> 2 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-info ticket-label">In progress</span>
@@ -415,7 +415,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Robert Jang</a> 3 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-danger ticket-label">Rejected</span>
@@ -423,7 +423,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Robert Jang</a> 4 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-success ticket-label">Completed</span>
@@ -431,7 +431,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Timothy Owens</a> 5 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-success ticket-label">Completed</span>
@@ -439,7 +439,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#" title="">Timothy Owens</a> today
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-warning ticket-label">Pending</span>
@@ -447,7 +447,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Denise Steiner</a> 2 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-info ticket-label">In progress</span>
@@ -457,7 +457,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Robert Jang</a> 3 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-danger ticket-label">Rejected</span>
@@ -465,7 +465,7 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Robert Jang</a> 4 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
 
                     <div class="ticket">
                         <span class="label label-success ticket-label">Completed</span>
@@ -473,24 +473,24 @@
                         <span class="ticket-info">
                             Opened by <a href="#">Timothy Owens</a> 5 days ago
                         </span>
-                    </div> <!-- / .ticket -->
+                    </div>  / .ticket 
                 </div>
-            </div> <!-- / .panel-body -->
-        </div> <!-- / .panel -->
+            </div>  / .panel-body 
+        </div>  / .panel 
     </div>
-    <!-- /10. $SUPPORT_TICKETS -->
+     /10. $SUPPORT_TICKETS 
 
-    <!-- 11. $RECENT_ACTIVITY ==========================================================================
+     11. $RECENT_ACTIVITY ==========================================================================
     
                             Recent activity
-    -->
-    <!-- Javascript -->
+    
+     Javascript 
     <script>
         init.push(function () {
             $('#dashboard-recent .panel-body > div').slimScroll({height: 300, alwaysVisible: true, color: '#888', allowPageScroll: true});
         })
     </script>
-    <!-- / Javascript -->
+     / Javascript 
 
     <div class="col-md-6">
 
@@ -506,14 +506,14 @@
                         <a href="#dashboard-recent-threads" data-toggle="tab">Forum threads</a>
                     </li>
                 </ul>
-            </div> <!-- / .panel-heading -->
+            </div>  / .panel-heading 
             <div class="tab-content">
 
-                <!-- Comments widget -->
+                 Comments widget 
 
-                <!-- Without padding -->
+                 Without padding 
                 <div class="widget-comments panel-body tab-pane no-padding fade active in" id="dashboard-recent-comments">
-                    <!-- Panel padding, without vertical padding -->
+                     Panel padding, without vertical padding 
                     <div class="panel-padding no-padding-vr">
                         <div class="comment">
                             <img src="assets/demo/avatars/5.jpg" alt="" class="comment-avatar">
@@ -529,8 +529,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/3.jpg" alt="" class="comment-avatar">
@@ -546,8 +546,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="comment-avatar">
@@ -563,8 +563,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/4.jpg" alt="" class="comment-avatar">
@@ -580,8 +580,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/5.jpg" alt="" class="comment-avatar">
@@ -597,8 +597,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/3.jpg" alt="" class="comment-avatar">
@@ -614,8 +614,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="comment-avatar">
@@ -631,8 +631,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/4.jpg" alt="" class="comment-avatar">
@@ -648,8 +648,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="comment-avatar">
@@ -665,8 +665,8 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
 
                         <div class="comment">
                             <img src="assets/demo/avatars/4.jpg" alt="" class="comment-avatar">
@@ -682,14 +682,14 @@
                                     <a href="#"><i class="fa fa-times"></i>Remove</a>
                                     <span class="pull-right">2 hours ago</span>
                                 </div>
-                            </div> <!-- / .comment-body -->
-                        </div> <!-- / .comment -->
+                            </div>  / .comment-body 
+                        </div>  / .comment 
                     </div>
-                </div> <!-- / .widget-comments -->
+                </div>  / .widget-comments 
 
-                <!-- Threads widget -->
+                 Threads widget -->
 
-                <!-- Without padding -->
+<!--                 Without padding 
                 <div class="widget-threads panel-body tab-pane no-padding fade" id="dashboard-recent-threads">
                     <div class="panel-padding no-padding-vr">
                         <div class="thread">
@@ -698,8 +698,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Robert Jang</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/3.jpg" alt="" class="thread-avatar">
@@ -707,8 +707,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Michelle Bortz</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/4.jpg" alt="" class="thread-avatar">
@@ -716,8 +716,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Timothy Owens</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/5.jpg" alt="" class="thread-avatar">
@@ -725,8 +725,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Denise Steiner</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="thread-avatar">
@@ -734,8 +734,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Robert Jang</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="thread-avatar">
@@ -743,8 +743,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Robert Jang</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/3.jpg" alt="" class="thread-avatar">
@@ -752,8 +752,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Michelle Bortz</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/4.jpg" alt="" class="thread-avatar">
@@ -761,8 +761,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Timothy Owens</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/5.jpg" alt="" class="thread-avatar">
@@ -770,8 +770,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Denise Steiner</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="thread-avatar">
@@ -779,16 +779,16 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Robert Jang</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
                         <div class="thread">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="thread-avatar">
                             <div class="thread-body">
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Robert Jang</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/3.jpg" alt="" class="thread-avatar">
@@ -796,8 +796,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Michelle Bortz</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/4.jpg" alt="" class="thread-avatar">
@@ -805,8 +805,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Timothy Owens</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/5.jpg" alt="" class="thread-avatar">
@@ -814,8 +814,8 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Denise Steiner</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
 
                         <div class="thread">
                             <img src="assets/demo/avatars/2.jpg" alt="" class="thread-avatar">
@@ -823,25 +823,25 @@
                                 <span class="thread-time">14h</span>
                                 <a href="#" class="thread-title">Lorem ipsum dolor sit amet</a>
                                 <div class="thread-info">started by <a href="#" title="">Robert Jang</a> in <a href="#" title="">Forum name</a></div>
-                            </div> <!-- / .thread-body -->
-                        </div> <!-- / .thread -->
+                            </div>  / .thread-body 
+                        </div>  / .thread 
                     </div>
-                </div> <!-- / .panel-body -->
+                </div>  / .panel-body 
             </div>
-        </div> <!-- / .widget-threads -->
+        </div>  / .widget-threads 
     </div>
-    <!-- /11. $RECENT_ACTIVITY -->
-</div>
+     /11. $RECENT_ACTIVITY 
+</div>-->
 
 <!-- Page wide horizontal line -->
-<hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
+<!--<hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
 
 <div class="row">
 
-    <!-- 12. $NEW_USERS_TABLE ==========================================================================
+     12. $NEW_USERS_TABLE ==========================================================================
     
                             New users table
-    -->
+    
     <div class="col-md-7">
         <div class="panel panel-dark panel-light-green">
             <div class="panel-heading">
@@ -853,9 +853,9 @@
                         <li><a href="#">2</a></li>
                         <li><a href="#">3</a></li>
                         <li><a href="#">»</a></li>
-                    </ul> <!-- / .pagination -->
-                </div> <!-- / .panel-heading-controls -->
-            </div> <!-- / .panel-heading -->
+                    </ul>  / .pagination 
+                </div>  / .panel-heading-controls 
+            </div>  / .panel-heading 
             <table class="table">
                 <thead>
                     <tr>
@@ -932,16 +932,16 @@
                     </tr>
                 </tbody>
             </table>
-        </div> <!-- / .panel -->
+        </div>  / .panel 
     </div>
-    <!-- /12. $NEW_USERS_TABLE -->
+     /12. $NEW_USERS_TABLE -->
 
     <!-- 13. $RECENT_TASKS =============================================================================
     
                             Recent tasks
     -->
-    <div class="col-md-5">
-        <!-- Javascript -->
+<!--    <div class="col-md-5">
+         Javascript 
         <script>
             init.push(function () {
                 $('.widget-tasks .panel-body').pixelTasks().sortable({
@@ -958,7 +958,7 @@
                 });
             });
         </script>
-        <!-- / Javascript -->
+         / Javascript 
 
         <div class="panel widget-tasks panel-dark-gray">
             <div class="panel-heading">
@@ -966,8 +966,8 @@
                 <div class="panel-heading-controls">
                     <button class="btn btn-xs btn-primary btn-outline dark" id="clear-completed-tasks"><i class="fa fa-eraser text-success"></i> Clear completed tasks</button>
                 </div>
-            </div> <!-- / .panel-heading -->
-            <!-- Without vertical padding -->
+            </div>  / .panel-heading 
+             Without vertical padding 
             <div class="panel-body no-padding-vr">
 
                 <div class="task">
@@ -977,7 +977,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">A very important task<span>1 hour left</span></a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task completed">
                     <span class="label label-warning pull-right">High</span>
@@ -986,7 +986,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px" checked="checked"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">A very important task<span>58 minutes left</span></a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task completed">
                     <div class="fa fa-arrows-v task-sort-icon"></div>
@@ -994,7 +994,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px" checked="checked"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">A regular task</a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task">
                     <div class="fa fa-arrows-v task-sort-icon"></div>
@@ -1002,7 +1002,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">A regular task</a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task">
                     <div class="fa fa-arrows-v task-sort-icon"></div>
@@ -1010,7 +1010,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">A regular task</a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task">
                     <span class="label pull-right">Low</span>
@@ -1019,7 +1019,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">An unimportant task</a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task">
                     <span class="label pull-right">Low</span>
@@ -1028,7 +1028,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">An unimportant task</a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task">
                     <div class="fa fa-arrows-v task-sort-icon"></div>
@@ -1036,7 +1036,7 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">A regular task</a>
-                </div> <!-- / .task -->
+                </div>  / .task 
 
                 <div class="task">
                     <span class="label pull-right">Low</span>
@@ -1045,10 +1045,10 @@
                         <label class="px-single"><input type="checkbox" name="" value="" class="px"><span class="lbl"></span></label>
                     </div>
                     <a href="#" class="task-title">An unimportant task</a>
-                </div> <!-- / .task -->
-            </div> <!-- / .panel-body -->
-        </div> <!-- / .panel -->
+                </div>  / .task 
+            </div>  / .panel-body 
+        </div>  / .panel 
     </div>
-    <!-- /13. $RECENT_TASKS -->
+     /13. $RECENT_TASKS -->
 
-</div>
+<!--</div>-->
