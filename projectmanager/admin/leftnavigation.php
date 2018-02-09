@@ -8,21 +8,21 @@
     </div>
     <ul class="navigation">
         <li><a href="mainpage.php"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">Dashboard</span></a></li>
-        <li class="mm-dropdown">
+<!--        <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-suitcase"></i><span class="mm-text">Account</span></a>
             <ul>
                 <li><a tabindex="-1" href="mainpage.php?pagename=view_account"><span class="mm-text">View Account</span></a></li>
                 <li><a tabindex="-1" href="mainpage.php?pagename=viewtransaction_account"><span class="mm-text">View Transaction</span></a></li>
             </ul>
-        </li>
-
+        </li>-->
+<!--
         <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-users"></i><span class="mm-text">Attendance</span></a>
             <ul>
                 <li><a tabindex="-1" href="mainpage.php?pagename=add_attendance"><span class="mm-text">Manage Attendance</span></a></li>
                 <li><a tabindex="-1" href="mainpage.php?pagename=view_attendance"><span class="mm-text">Attendance Report</span></a></li>
             </ul>
-        </li>
+        </li>-->
 
         <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-sitemap"></i><span class="mm-text">Recruitment</span></a>
@@ -44,6 +44,14 @@
         </li>
 
         <li class="mm-dropdown">
+            <a href="#"><i class="menu-icon fa fa-user"></i><span class="mm-text">Documents</span></a>
+            <ul>
+                <li><a tabindex="-1" href="mainpage.php?pagename=add_documents"><span class="mm-text">Upload&nbsp;Documents</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=view_documents"><span class="mm-text">View&nbsp;Documents</span></a></li>
+            </ul>
+        </li>
+        
+        <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-dollar"></i><span class="mm-text">Salary</span></a>
             <ul>
                 <li><a tabindex="-1" href="mainpage.php?pagename=create_salary"><span class="mm-text">Create Salary</span></a></li>
@@ -64,7 +72,8 @@
             <a href="#"><i class="menu-icon fa fa-calendar"></i><span class="mm-text">Timesheet</span></a>
             <ul>
                 <li><a tabindex="-1" href="mainpage.php?pagename=project_timesheet"><span class="mm-text">Projects</span></a></li>
-                <li><a tabindex="-1" href="mainpage.php?pagename=viewproject_timesheet"><span class="mm-text">Timesheets</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=viewproject_timesheet"><span class="mm-text">Time Sheets</span></a></li>
+                <li><a tabindex="-1" href="mainpage.php?pagename=detail_timesheet"><span class="mm-text">Detail Time Sheet</span></a></li>
             </ul>
         </li>
     </ul>

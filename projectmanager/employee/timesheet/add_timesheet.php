@@ -9,12 +9,14 @@ $array["tuesday"] = date("Y-m-d", strtotime('tuesday this week'));
 $array["wednesday"] = date("Y-m-d", strtotime('wednesday this week'));
 $array["thursday"] = date("Y-m-d", strtotime('thursday this week'));
 $array["friday"] = date("Y-m-d", strtotime('friday this week'));
-$array["satuday"] = date("Y-m-d", strtotime('saturday this week'));
+//$array["satuday"] = date("Y-m-d", strtotime('saturday this week'));
 $endDate = date("Y-m-d", strtotime('saturday this week'));
 
 $timesheetarray = array();
 
-$arrproject = MysqlConnection::fetchAll("tbl_project");
+$id = $_SESSION["logindetails"][0]["id"];
+$sqlcustom = "select * from tbl_project p, tbl_employee_project ep where p.id = ep.projectId AND ep.employeeId = $id";
+$arrproject = MysqlConnection::fetchCustom($sqlcustom);
 $arrleaves = MysqlConnection::fetchAll("tbl_leave");
 
 $timesheetdropdown = array();
@@ -73,7 +75,7 @@ if (isset($_POST["btnValidate"]) || isset($_POST["btnSubmit"])) {
             }
         }
     }
-    if ($totalHours < 40 || $totalHours > 48) {
+    if ($totalHours < 40) {
         $isValidate = "";
         $invalid = "Please validate your timesheet";
     } else {
@@ -128,7 +130,7 @@ if (isset($_POST["btnValidate"]) || isset($_POST["btnSubmit"])) {
                                         <td>
 
                                             <select name="timesheet<?php echo $index ?>" class="form-control">
-                                                <option value="">Please select</option>
+                                                <option>PLEASE SELECT</option>
                                                 <?php
                                                 foreach ($timesheetdropdown as $key => $value) {
 
@@ -139,7 +141,7 @@ if (isset($_POST["btnValidate"]) || isset($_POST["btnSubmit"])) {
                                                         $selected = "";
                                                     }
                                                     ?>
-                                                    <option value="<?php echo implode("-", $value) ?>" <?php echo $selected ?>>
+                                                    <option style="text-transform: uppercase " value="<?php echo implode("-", $value) ?>" <?php echo $selected ?>>
                                                         <?php echo $value["P"] ?>- 
                                                         <?php echo $value["P"] == "P" ? $value["projectid"] . "-" : "" ?>
                                                         <?php echo $value["P"] == "P" ? $value["projectcode"] . "-" : "" ?> 

@@ -33,6 +33,13 @@
                 <li><a tabindex="-1" href="mainpage.php?pagename=view_salary"><span class="mm-text">View Salary</span></a></li>
             </ul>
         </li>
+        
+        <li class="mm-dropdown">
+            <a href="#"><i class="menu-icon fa fa-file-text-o"></i><span class="mm-text">Documents</span></a>
+            <ul>
+                <li><a tabindex="-1" href="mainpage.php?pagename=view_documents"><span class="mm-text">View Documents</span></a></li>
+            </ul>
+        </li>
 
         <li class="mm-dropdown">
             <a href="#"><i class="menu-icon fa fa-plane"></i><span class="mm-text">Leave</span></a>

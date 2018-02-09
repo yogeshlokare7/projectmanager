@@ -2,6 +2,56 @@
 $sqlcustom = "SELECT distinct empid FROM ppms.tbl_timesheet;";
 $customarray = MysqlConnection::fetchCustom($sqlcustom);
 ?>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel">
+            <div class="panel-heading">
+                <span class="panel-title">Search</span>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group no-margin-hr">
+                            <label class="control-label">Employee Name <i class="requred">*</i>:</label>
+                            <select id="empId" name="employeeid" required="true" autofocus="true" class="form-control" tabindex="1" required>
+                                <option value="">Select</option>
+                                <?php
+                                foreach ($resultsetEmployees as $key => $value) {
+                                    ?>
+                                    <option value="<?php echo $value["id"] ?>">
+                                        <?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?> 
+                                    </option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group no-margin-hr">
+                            <label class="control-label">Project Name <i class="requred">*</i>:</label>
+                            <select id="empId" name="employeeid" required="true" autofocus="true" class="form-control" tabindex="1" required>
+                                <option value="">Select</option>
+                                <?php
+                                foreach ($resultsetEmployees as $key => $value) {
+                                    ?>
+                                    <option value="<?php echo $value["id"] ?>">
+                                        <?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?> 
+                                    </option>
+                                    <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </div><!-- row -->
+                <div class="col-sm-12" style="text-align: right">
+                    <input type="submit" class="btn btn-primary" value="Search"/>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="row">
     <div class="col-sm-12">

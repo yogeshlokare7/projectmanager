@@ -253,3 +253,20 @@ CREATE TABLE IF NOT EXISTS `tbl_recruitment` (
   `active` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+
+create table tbl_document(
+    id int(11) primary key auto_increment,
+    documentTitle varchar(500),
+    filepath text,
+    description text,
+    active char(1)
+);
+
+
+
+create table tbl_employee_project(
+    id int(11) primary key auto_increment,
+    employeeId int(11),
+    projectId int(11)
+);

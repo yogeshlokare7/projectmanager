@@ -1,34 +1,55 @@
 <?php
 $tblname = "tbl_employee";
-if (count($_POST) > 0) {
+if (isset($_POST["btnSaveEmp"]) && count($_POST) > 0) {
     $_POST["password"] = randomPassword(8);
     $_POST["entrydate"] = date("y-m-d");
     $_POST["updatedate"] = date("y-m-d");
     $_POST["active"] = "Y";
     MysqlConnection::insert($tblname, $_POST);
 }
-if($_GET['del'] > 0){
+
+if (isset($_POST["btnSaveProjectToEmp"]) && count($_POST) > 0) {
+    unset($_POST["btnSaveProjectToEmp"]);
+
+    $sqlcustom = "SELECT * FROM tbl_employee_project where employeeId = " . $_POST["employeeId"] . " AND projectId = " . $_POST["projectId"];
+    $resultset = MysqlConnection::fetchCustom($sqlcustom);
+    $counter = count($resultset);
+    if ($counter == 0) {
+        MysqlConnection::insert("tbl_employee_project", $_POST);
+    } else {
+        $error = "Project is already allocated to employee";
+    }
+}
+
+
+if ($_GET['del'] > 0) {
     MysqlConnection::delete($tblname, $_GET['del']);
     header("location:mainpage.php?pagename=view_employee");
 }
 $resultset = MysqlConnection::fetchAll($tblname);
 $resultsetposition = MysqlConnection::fetchAll("tbl_position");
+$project = MysqlConnection::fetchAll("tbl_project");
 ?>
 <div class="row">
     <div class="col-sm-12">
         <script>
-            init.push(function () {
+            init.push(function() {
                 $('#jq-datatables-example').dataTable();
                 $('#jq-datatables-example_wrapper .table-caption').text('<?php echo ucwords($explode[1]) ?> Information');
                 $('#jq-datatables-example_wrapper .dataTables_filter input').attr('placeholder', 'Search...');
             });
         </script>
+        <p style="color: red"><?php echo $error ?></p>
         <div class="panel">
             <div class="panel-heading">
                 <span class="panel-title">View <?php echo $explode[1] ?></span>
                 <span class="panel-title">&nbsp;|&nbsp;</span>
                 <span class="panel-title">
                     <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModal">Add <?php echo $explode[1] ?></button>
+                </span>
+                <span class="panel-title">&nbsp;|&nbsp;</span>
+                <span class="panel-title">
+                    <button class="btn btn-success btn-xs btn-outline btn-flat btn-rounded" data-toggle="modal" data-target="#myModal1">Add Project</button>
                 </span>
             </div>
             <div class="panel-body">
@@ -61,7 +82,7 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                                     <td><a data-toggle="modal" data-target="#myModal" data-formid="<?php echo $value["id"] ?>"><span class="mm-text"><i class="fa fa-edit"></i></a></td>
                                     <td><?php echo $value["empId"] ?></td>
                                     <td><?php echo $value["firstname"] ?> <?php echo $value["middlename"] ?> <?php echo $value["lastname"] ?></td>
-                                    <td><?php echo $value["image"] ?></td>
+                                    <td><img src="../assets/images/custom/user-dummy.png" style="width: 60px;height: 60px;"/></td>
                                     <td><?php echo $value["jobtitle"] ?></td>
                                     <td><?php echo $value["emailid"] ?></td>
                                     <td><?php echo $value["contactnumber"] ?></td>
@@ -97,9 +118,9 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title" id="myModalLabel">Employee Information</h4>
                 <?php
-    $id = $_REQUEST['id'];
-    echo $id;
-    ?>
+                $id = $_REQUEST['id'];
+                echo $id;
+                ?>
             </div>
             <form name="frmEntry" method="post">
                 <div class="modal-body">
@@ -189,7 +210,7 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group no-margin-hr">
-                                <label class="control-label">Permenent Address  </label>
+                                <label class="control-label">Permanent Address</label>
                                 <textarea name="permenentaddress"  class="form-control"></textarea>
                             </div>
                         </div><!-- col-sm-6 -->
@@ -198,7 +219,7 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
 
                 </div>  
                 <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" value="Save"/>  
+                    <input type="submit" class="btn btn-primary" value="Save" name="btnSaveEmp"/>  
                     <button type="button"  class="btn btn-info" data-dismiss="modal">Close</button>
                 </div>
             </form>
@@ -206,6 +227,69 @@ $resultsetposition = MysqlConnection::fetchAll("tbl_position");
     </div>  
 </div>  
 <!--- ADD POP UP DIALOG ---->
+
+
+
+<!--- ADD POP UP DIALOG ---->
+<div id="myModal1" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Assign Project to employee</h4>
+            </div>
+            <form name="frmEntryProject" method="post">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group no-margin-hr">
+                                <label class="control-label">Employee <i class="requred">*</i></label>
+                                <select name="employeeId" class="form-control">
+                                    <?php
+                                    foreach ($resultset as $key => $value) {
+                                        ?>
+                                        <option value="<?php echo $value["id"] ?>">
+                                            <?php echo $value["empId"] ?> 
+                                            <?php echo $value["firstname"] ?> 
+                                            <?php echo $value["middlename"] ?> 
+                                            <?php echo $value["lastname"] ?>
+                                        </option>    
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div><!-- col-sm-6 -->
+                    </div><!-- row -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group no-margin-hr">
+                                <label class="control-label">Project  </label>
+                                <select name="projectId" class="form-control">
+                                    <?php
+                                    foreach ($project as $key => $value) {
+                                        ?>
+                                        <option value="<?php echo $value["id"] ?>">
+                                            <?php echo $value["projectcode"] ?>-
+                                            <?php echo $value["projectname"] ?> 
+                                        </option>   
+                                        <?php
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                        </div><!-- col-sm-6 -->
+                    </div><!-- row -->
+                </div>  
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-primary" value="Save" name="btnSaveProjectToEmp"/>  
+                    <button type="button"  class="btn btn-info" data-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div> 
+    </div>  
+</div>
+
 <?php
 
 function randomPassword($length = 8) {
